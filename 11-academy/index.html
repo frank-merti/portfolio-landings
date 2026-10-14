@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SkillStack Academy — Aprende tech online</title>
+<meta name="description" content="Cursos de programación, diseño y datos."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{violet:'#7c3aed',deep:'#4c1d95',ink:'#0f0a1f',slate:'#e2e8f0'},fontFamily:{display:['"Space Grotesk"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#0f0a1f;color:#e2e8f0}.font-display{font-family:'Space Grotesk',sans-serif}
+.hero{background:radial-gradient(ellipse at 70% 20%,rgba(124,58,237,.35),transparent 55%),linear-gradient(180deg,#0f0a1f,#1a1033)}
+.card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(124,58,237,.25)}
+</style>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-ink/70 border-b border-white/5">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <a class="font-display text-2xl text-violet">SkillStack</a>
+  <div class="hidden md:flex gap-8 text-sm"><a href="#cursos" data-i18n="n_courses" class="hover:text-violet">Cursos</a><a href="#planes" data-i18n="n_plans" class="hover:text-violet">Planes</a><a href="#instructores" data-i18n="n_inst" class="hover:text-violet">Instructores</a></div>
+  <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-violet/40 hover:bg-violet/10 transition">EN</button>
+ </nav>
+</header>
+<section class="hero min-h-screen flex items-center pt-20">
+ <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+   <p class="text-violet tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_e">Aprende tech con expertos</p>
+   <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6" data-i18n="hero_t">Domina las skills del futuro.</h1>
+   <p class="text-slate-300 text-lg max-w-xl mb-8" data-i18n="hero_s">Más de 60 cursos en desarrollo web, data, diseño y producto. Aprende a tu ritmo, con proyectos reales y certificación.</p>
+   <div class="flex gap-4"><a href="#cursos" class="bg-violet px-7 py-3 rounded-full font-semibold hover:bg-violet/90 transition" data-i18n="hero_c1">Explorar cursos</a><a href="#planes" class="border border-slate-500 px-7 py-3 rounded-full hover:bg-white/5 transition" data-i18n="hero_c2">Ver planes</a></div>
+   <div class="flex gap-10 mt-10"><div><p class="font-display text-3xl text-violet">60+</p><p class="text-xs text-slate-400" data-i18n="s1">Cursos</p></div><div><p class="font-display text-3xl text-violet">18k</p><p class="text-xs text-slate-400" data-i18n="s2">Estudiantes</p></div><div><p class="font-display text-3xl text-violet">4.8</p><p class="text-xs text-slate-400" data-i18n="s3">Rating</p></div></div>
+  </div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-violet/20"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+ </div>
+</section>
+<section id="cursos" class="py-24 max-w-7xl mx-auto px-6">
+ <h2 class="font-display text-4xl text-center mb-10" data-i18n="courses_t">Cursos destacados</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c1">React desde cero</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c1d">Hooks, estado y routing.</p><div class="flex justify-between text-xs text-slate-500"><span>40 h</span><span>⭐ 4.9</span></div></article>
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c2">Next.js avanzado</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c2d">App Router y deploy.</p><div class="flex justify-between text-xs text-slate-500"><span>32 h</span><span>⭐ 4.8</span></div></article>
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c3">UX/UI Design</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c3d">Figma y design systems.</p><div class="flex justify-between text-xs text-slate-500"><span>28 h</span><span>⭐ 4.9</span></div></article>
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c4">Python y Data</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c4d">Pandas y visualización.</p><div class="flex justify-between text-xs text-slate-500"><span>45 h</span><span>⭐ 4.7</span></div></article>
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c5">Node.js & APIs</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c5d">Express y REST.</p><div class="flex justify-between text-xs text-slate-500"><span>36 h</span><span>⭐ 4.8</span></div></article>
+  <article class="card-hover bg-white/5 p-6 rounded-2xl border border-white/5"><h3 class="font-display text-xl text-violet mb-2" data-i18n="c6">SQL y bases</h3><p class="text-slate-400 text-sm mb-3" data-i18n="c6d">Modelado y performance.</p><div class="flex justify-between text-xs text-slate-500"><span>24 h</span><span>⭐ 4.9</span></div></article>
+ </div>
+</section>
+<section id="planes" class="py-24 bg-white/5">
+ <div class="max-w-6xl mx-auto px-6">
+  <h2 class="font-display text-4xl text-center mb-10" data-i18n="plans_t">Planes</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+   <div class="bg-ink/60 p-8 rounded-2xl border border-white/5"><h3 class="font-display text-2xl mb-2" data-i18n="pl1">Básico</h3><p class="text-3xl font-bold text-violet mb-4">$9/mes</p><ul class="space-y-2 text-sm text-slate-300 mb-6"><li>✓ 5 cursos</li><li>✓ Foro comunidad</li></ul><button class="w-full border border-violet text-violet py-3 rounded-full hover:bg-violet/10 transition" data-i18n="pl_cta">Empezar</button></div>
+   <div class="bg-violet p-8 rounded-2xl scale-105 shadow-2xl"><p class="text-xs font-bold uppercase tracking-widest mb-2 opacity-80" data-i18n="pl_pop">Recomendado</p><h3 class="font-display text-2xl mb-2" data-i18n="pl2">Pro</h3><p class="text-3xl font-bold mb-4">$19/mes</p><ul class="space-y-2 text-sm mb-6"><li>✓ Todos los cursos</li><li>✓ Certificados</li><li>✓ Proyectos revisados</li></ul><button class="w-full bg-white text-violet py-3 rounded-full font-bold hover:bg-slate-100 transition" data-i18n="pl_cta">Empezar</button></div>
+   <div class="bg-ink/60 p-8 rounded-2xl border border-white/5"><h3 class="font-display text-2xl mb-2" data-i18n="pl3">Empresa</h3><p class="text-3xl font-bold text-violet mb-4">$Custom</p><ul class="space-y-2 text-sm text-slate-300 mb-6"><li>✓ Licencias múltiples</li><li>✓ Dashboard admin</li><li>✓ Soporte dedicado</li></ul><button class="w-full border border-violet text-violet py-3 rounded-full hover:bg-violet/10 transition" data-i18n="pl_cta">Contactar</button></div>
+  </div>
+ </div>
+</section>
+<section id="instructores" class="py-24 max-w-6xl mx-auto px-6">
+ <h2 class="font-display text-4xl text-center mb-10" data-i18n="inst_t">Instructores</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+  <div><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Diego Herrera</p><p class="text-xs text-slate-400">Frontend</p></div>
+  <div><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Laura Chen</p><p class="text-xs text-slate-400">Design</p></div>
+  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Marco Silva</p><p class="text-xs text-slate-400">Backend</p></div>
+  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Ana Torres</p><p class="text-xs text-slate-400">Data</p></div>
+ </div>
+</section>
+<footer class="py-8 text-center text-xs text-slate-500">© 2026 SkillStack Academy · Portfolio demo</footer>
+<script>
+const dict={es:{n_courses:'Cursos',n_plans:'Planes',n_inst:'Instructores',hero_e:'Aprende tech con expertos',hero_t:'Domina las skills del futuro.',hero_s:'Más de 60 cursos en desarrollo web, data, diseño y producto. Aprende a tu ritmo, con proyectos reales y certificación.',hero_c1:'Explorar cursos',hero_c2:'Ver planes',s1:'Cursos',s2:'Estudiantes',s3:'Rating',courses_t:'Cursos destacados',c1:'React desde cero',c1d:'Hooks, estado y routing.',c2:'Next.js avanzado',c2d:'App Router y deploy.',c3:'UX/UI Design',c3d:'Figma y design systems.',c4:'Python y Data',c4d:'Pandas y visualización.',c5:'Node.js & APIs',c5d:'Express y REST.',c6:'SQL y bases',c6d:'Modelado y performance.',plans_t:'Planes',pl1:'Básico',pl2:'Pro',pl3:'Empresa',pl_cta:'Empezar',pl_pop:'Recomendado',inst_t:'Instructores'},en:{n_courses:'Courses',n_plans:'Plans',n_inst:'Instructors',hero_e:'Learn tech with experts',hero_t:'Master the skills of the future.',hero_s:'60+ courses on web development, data, design and product. Learn at your pace, with real projects and certification.',hero_c1:'Explore courses',hero_c2:'View plans',s1:'Courses',s2:'Students',s3:'Rating',courses_t:'Featured courses',c1:'React from scratch',c1d:'Hooks, state and routing.',c2:'Advanced Next.js',c2d:'App Router and deploy.',c3:'UX/UI Design',c3d:'Figma and design systems.',c4:'Python & Data',c4d:'Pandas and visualization.',c5:'Node.js & APIs',c5d:'Express and REST.',c6:'SQL & databases',c6d:'Modeling and performance.',plans_t:'Plans',pl1:'Basic',pl2:'Pro',pl3:'Enterprise',pl_cta:'Start',pl_pop:'Recommended',inst_t:'Instructors'}};
+let lang=localStorage.getItem('lang')||'es';
+function apply(l){lang=l;localStorage.setItem('lang',l);document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(dict[l][k])e.textContent=dict[l][k];});document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';}
+document.getElementById('langBtn').addEventListener('click',()=>apply(lang==='es'?'en':'es'));apply(lang);
+</script>
+</body></html>

@@ -12,6 +12,10 @@ Colección de landing pages y mini-proyectos para portafolio de GitHub. Cada car
 - `06-evento` — Conferencia tech "DevConf 2026" (HTML + Tailwind CDN). Speakers, agenda, tickets.
 - `07-producto-react` — Audífonos "Aether H1" (React + Vite + Tailwind). Selector de color, carrito.
 - `08-portfolio-next` — Portafolio personal del desarrollador (Next.js 14 + Tailwind). Proyectos, skills, experiencia, blog.
+- `09-cafe` — Cafetería "Origen Café" (HTML + Tailwind CDN). Menú, orígenes, sucursales.
+- `10-travel` — Agencia "Nomad Routes" (HTML + Tailwind CDN). Destinos, paquetes, cotizador.
+- `11-academy` — Academia "SkillStack" (HTML + Tailwind CDN). Cursos, planes, instructores.
+- `12-clinic` — Clínica "NovaClinic" (HTML + Tailwind CDN). Servicios, doctores, citas.
 
 ## Cómo ejecutar
 

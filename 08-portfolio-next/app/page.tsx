@@ -35,7 +35,11 @@ const PROJECTS = [
  { title:'IronForge Gym', desc:'Gimnasio moderno: programas, planes y entrenadores.', tech:['HTML','Tailwind CDN'], color:'from-lime-400 to-green-600', link:'../04-gimnasio' },
  { title:'Altura Homes', desc:'Bienes raíces premium con catálogo de propiedades.', tech:['HTML','Tailwind CDN'], color:'from-amber-400 to-yellow-600', link:'../05-inmobiliaria' },
  { title:'DevConf 2026', desc:'Landing de conferencia tech: speakers, agenda y tickets.', tech:['HTML','Tailwind CDN'], color:'from-cyan-400 to-violet-500', link:'../06-evento' },
- { title:'Aether H1', desc:'Audífonos premium con ANC: React + Vite, selector de color y carrito.', tech:['React','Vite','Tailwind'], color:'from-amber-600 to-stone-700', link:'../07-producto-react' }
+ { title:'Aether H1', desc:'Audífonos premium con ANC: React + Vite, selector de color y carrito.', tech:['React','Vite','Tailwind'], color:'from-amber-600 to-stone-700', link:'../07-producto-react' },
+ { title:'Origen Café', desc:'Cafetería de especialidad: menú, orígenes, sucursales.', tech:['HTML','Tailwind CDN'], color:'from-amber-700 to-yellow-600', link:'../09-cafe' },
+ { title:'Nomad Routes', desc:'Agencia de viajes: destinos, paquetes, cotizador.', tech:['HTML','Tailwind CDN'], color:'from-sky-500 to-cyan-500', link:'../10-travel' },
+ { title:'SkillStack Academy', desc:'Plataforma educativa tech: cursos, planes, instructores.', tech:['HTML','Tailwind CDN'], color:'from-violet-600 to-purple-700', link:'../11-academy' },
+ { title:'NovaClinic', desc:'Clínica médica integral: servicios, doctores, citas.', tech:['HTML','Tailwind CDN'], color:'from-teal-500 to-emerald-600', link:'../12-clinic' }
 ]
 
 const SKILLS = ['React','Next.js','TypeScript','Tailwind CSS','Node.js','Express','PostgreSQL','MongoDB','Docker','Git','Figma','REST/GraphQL']

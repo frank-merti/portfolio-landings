@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NovaClinic — Salud & Bienestar</title>
+<meta name="description" content="Clínica médica integral y especialidades."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{teal:'#0d9488',deep:'#115e59',paper:'#f0fdfa',ink:'#0f172a'},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#f0fdfa;color:#0f172a}.font-display{font-family:'Plus Jakarta Sans',sans-serif}
+.hero{background:radial-gradient(ellipse at 80% 40%,rgba(13,148,136,.18),transparent 60%),linear-gradient(180deg,#f0fdfa,#ccfbf1)}
+.card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 16px 32px -8px rgba(13,148,136,.15)}
+</style>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-white/70 border-b border-teal/10">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <a class="font-display text-2xl text-teal">NovaClinic</a>
+  <div class="hidden md:flex gap-8 text-sm"><a href="#servicios" data-i18n="n_serv" class="hover:text-teal">Servicios</a><a href="#doctores" data-i18n="n_docs" class="hover:text-teal">Doctores</a><a href="#cita" data-i18n="n_book" class="hover:text-teal">Agendar</a></div>
+  <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-teal/30 hover:bg-teal/10 transition">EN</button>
+ </nav>
+</header>
+<section class="hero min-h-screen flex items-center pt-20">
+ <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+   <p class="text-teal tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_e">Cuidando tu salud</p>
+   <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6" data-i18n="hero_t">Tu bienestar, nuestra prioridad.</h1>
+   <p class="text-slate-600 text-lg max-w-xl mb-8" data-i18n="hero_s">Atención médica integral: medicina general, especialidades, laboratorio y bienestar. Agenda tu cita en línea y recibe atención personalizada.</p>
+   <div class="flex gap-4"><a href="#cita" class="bg-teal text-white px-7 py-3 rounded-full font-semibold hover:bg-teal/90 transition" data-i18n="hero_c1">Agendar cita</a><a href="#servicios" class="border border-slate-300 px-7 py-3 rounded-full hover:bg-slate-50 transition" data-i18n="hero_c2">Servicios</a></div>
+   <div class="flex gap-10 mt-10"><div><p class="font-display text-3xl text-teal">15</p><p class="text-xs text-slate-500" data-i18n="s1">Especialidades</p></div><div><p class="font-display text-3xl text-teal">40+</p><p class="text-xs text-slate-500" data-i18n="s2">Doctores</p></div><div><p class="font-display text-3xl text-teal">98%</p><p class="text-xs text-slate-500" data-i18n="s3">Satisfacción</p></div></div>
+  </div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+ </div>
+</section>
+<section id="servicios" class="py-24 max-w-7xl mx-auto px-6">
+ <h2 class="font-display text-4xl text-center mb-10" data-i18n="serv_t">Servicios</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="card-hover bg-white p-7 rounded-2xl border border-slate-100"><h3 class="font-display text-lg text-teal mb-2" data-i18n="ser1">Medicina general</h3><p class="text-slate-500 text-sm" data-i18n="ser1d">Consultas y chequeos.</p></div>
+  <div class="card-hover bg-white p-7 rounded-2xl border border-slate-100"><h3 class="font-display text-lg text-teal mb-2" data-i18n="ser2">Cardiología</h3><p class="text-slate-500 text-sm" data-i18n="ser2d">Electro y ecocardiograma.</p></div>
+  <div class="card-hover bg-white p-7 rounded-2xl border border-slate-100"><h3 class="font-display text-lg text-teal mb-2" data-i18n="ser3">Laboratorio</h3><p class="text-slate-500 text-sm" data-i18n="ser3d">Resultados en 24h.</p></div>
+  <div class="card-hover bg-white p-7 rounded-2xl border border-slate-100"><h3 class="font-display text-lg text-teal mb-2" data-i18n="ser4">Bienestar</h3><p class="text-slate-500 text-sm" data-i18n="ser4d">Nutrición y psicología.</p></div>
+ </div>
+</section>
+<section id="doctores" class="py-24 bg-white">
+ <div class="max-w-6xl mx-auto px-6">
+  <h2 class="font-display text-4xl text-center mb-10" data-i18n="docs_t">Nuestros doctores</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+   <div><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dra. Sofía Andrade</p><p class="text-xs text-slate-500">Medicina general</p></div>
+   <div><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dr. Carlos Mena</p><p class="text-xs text-slate-500">Cardiología</p></div>
+   <div><img src="https://images.unsplash.com/photo-1594824476977-81569592859b?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dra. Marina López</p><p class="text-xs text-slate-500">Nutrición</p></div>
+  </div>
+ </div>
+</section>
+<section id="cita" class="py-24 bg-teal/5 border-y border-teal/20">
+ <div class="max-w-2xl mx-auto px-6">
+  <div class="text-center mb-8"><h2 class="font-display text-4xl mb-2" data-i18n="book_t">Agendar cita</h2><p class="text-slate-600" data-i18n="book_s">Te confirmamos en 1 hora.</p></div>
+  <form class="grid sm:grid-cols-2 gap-4 bg-white p-8 rounded-3xl border border-teal/10 shadow-sm">
+   <input class="border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-teal" placeholder="Nombre" data-ph="ph_name"/>
+   <input class="border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-teal" placeholder="Teléfono" data-ph="ph_phone"/>
+   <input type="date" class="border border-slate-200 rounded-xl px-4 py-3"/>
+   <select class="border border-slate-200 rounded-xl px-4 py-3"><option>Medicina general</option><option>Cardiología</option><option>Laboratorio</option><option>Nutrición</option></select>
+   <textarea rows="3" class="sm:col-span-2 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-teal" placeholder="Síntomas / notas" data-ph="ph_note"></textarea>
+   <button type="button" id="bookBtn" class="sm:col-span-2 bg-teal text-white py-3 rounded-xl font-semibold hover:bg-teal/90 transition" data-i18n="book_btn">Agendar</button>
+   <p id="bookMsg" class="sm:col-span-2 text-center text-teal text-sm hidden" data-i18n="book_ok">¡Cita agendada! Te contactamos pronto.</p>
+  </form>
+ </div>
+</section>
+<footer class="py-8 text-center text-xs text-slate-400">© 2026 NovaClinic · Portfolio demo</footer>
+<script>
+const dict={es:{n_serv:'Servicios',n_docs:'Doctores',n_book:'Agendar',hero_e:'Cuidando tu salud',hero_t:'Tu bienestar, nuestra prioridad.',hero_s:'Atención médica integral: medicina general, especialidades, laboratorio y bienestar. Agenda tu cita en línea y recibe atención personalizada.',hero_c1:'Agendar cita',hero_c2:'Servicios',s1:'Especialidades',s2:'Doctores',s3:'Satisfacción',serv_t:'Servicios',ser1:'Medicina general',ser1d:'Consultas y chequeos.',ser2:'Cardiología',ser2d:'Electro y ecocardiograma.',ser3:'Laboratorio',ser3d:'Resultados en 24h.',ser4:'Bienestar',ser4d:'Nutrición y psicología.',docs_t:'Nuestros doctores',book_t:'Agendar cita',book_s:'Te confirmamos en 1 hora.',book_btn:'Agendar',book_ok:'¡Cita agendada! Te contactamos pronto.',ph_name:'Nombre',ph_phone:'Teléfono',ph_note:'Síntomas / notas'},en:{n_serv:'Services',n_docs:'Doctors',n_book:'Book',hero_e:'Caring for your health',hero_t:'Your wellness, our priority.',hero_s:'Comprehensive medical care: general medicine, specialties, lab and wellness. Book online and receive personalized care.',hero_c1:'Book appointment',hero_c2:'Services',s1:'Specialties',s2:'Doctors',s3:'Satisfaction',serv_t:'Services',ser1:'General medicine',ser1d:'Consultations and checkups.',ser2:'Cardiology',ser2d:'ECG and echo.',ser3:'Laboratory',ser3d:'Results in 24h.',ser4:'Wellness',ser4d:'Nutrition and psychology.',docs_t:'Our doctors',book_t:'Book appointment',book_s:'We confirm within 1 hour.',book_btn:'Book',book_ok:'Appointment booked! We will contact you soon.',ph_name:'Name',ph_phone:'Phone',ph_note:'Symptoms / notes'}};
+let lang=localStorage.getItem('lang')||'es';
+function apply(l){lang=l;localStorage.setItem('lang',l);document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(dict[l][k])e.textContent=dict[l][k];});document.querySelectorAll('[data-ph]').forEach(e=>{const k=e.getAttribute('data-ph');if(dict[l][k])e.placeholder=dict[l][k];});document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';}
+document.getElementById('langBtn').addEventListener('click',()=>apply(lang==='es'?'en':'es'));apply(lang);
+document.getElementById('bookBtn').addEventListener('click',()=>document.getElementById('bookMsg').classList.remove('hidden'));
+</script>
+</body></html>

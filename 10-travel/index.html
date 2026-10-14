@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Nomad Routes — Agencia de viajes</title>
+<meta name="description" content="Viajes personalizados a destinos únicos."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ocean:'#0ea5e9',deep:'#0c4a6e',sand:'#fef3c7',ink:'#0f172a'},fontFamily:{display:['"Poppins"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#f8fafc;color:#0f172a}.font-display{font-family:'Poppins',sans-serif}
+.hero{background:radial-gradient(ellipse at 20% 60%,rgba(14,165,233,.25),transparent 55%),linear-gradient(180deg,#e0f2fe,#f8fafc)}
+.card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(14,165,233,.18)}
+</style>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <a class="font-display text-2xl text-ocean">Nomad Routes</a>
+  <div class="hidden md:flex gap-8 text-sm"><a href="#destinos" data-i18n="n_dest" class="hover:text-ocean">Destinos</a><a href="#paquetes" data-i18n="n_pkg" class="hover:text-ocean">Paquetes</a><a href="#contacto" data-i18n="n_ct" class="hover:text-ocean">Contacto</a></div>
+  <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-ocean/40 hover:bg-ocean/10 transition">EN</button>
+ </nav>
+</header>
+<section class="hero min-h-screen flex items-center pt-20">
+ <div class="max-w-7xl mx-auto px-6 w-full text-center">
+  <p class="text-ocean tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_e">Aventuras a la medida</p>
+  <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6" data-i18n="hero_t">Viaja sin límites.</h1>
+  <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-8" data-i18n="hero_s">Diseñamos viajes personalizados a los destinos más hermosos del planeta. Vuelos, hoteles, experiencias y guías locales en un solo paquete.</p>
+  <div class="flex flex-wrap justify-center gap-4 mb-10">
+   <a href="#contacto" class="bg-ocean text-white px-8 py-3 rounded-full font-semibold hover:bg-ocean/90 transition" data-i18n="hero_c1">Cotizar viaje</a>
+   <a href="#destinos" class="border border-slate-300 px-8 py-3 rounded-full hover:bg-slate-50 transition" data-i18n="hero_c2">Destinos</a>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+   <div><p class="font-display text-3xl text-ocean">48</p><p class="text-xs text-slate-500" data-i18n="s1">Destinos</p></div>
+   <div><p class="font-display text-3xl text-ocean">12k+</p><p class="text-xs text-slate-500" data-i18n="s2">Viajeros</p></div>
+   <div><p class="font-display text-3xl text-ocean">96%</p><p class="text-xs text-slate-500" data-i18n="s3">Satisfacción</p></div>
+   <div><p class="font-display text-3xl text-ocean">15</p><p class="text-xs text-slate-500" data-i18n="s4">Años</p></div>
+  </div>
+ </div>
+</section>
+<section id="destinos" class="py-24 max-w-7xl mx-auto px-6">
+ <h2 class="font-display text-4xl text-center mb-10" data-i18n="dest_t">Destinos destacados</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d1">Bali</h3><p class="text-slate-500 text-sm" data-i18n="d1d">Playas y templos.</p><p class="text-ocean font-semibold mt-2">Desde $1,299</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d2">Japón</h3><p class="text-slate-500 text-sm" data-i18n="d2d">Tokio y Kioto.</p><p class="text-ocean font-semibold mt-2">Desde $1,899</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d3">Perú</h3><p class="text-slate-500 text-sm" data-i18n="d3d">Cuzco y Machu Picchu.</p><p class="text-ocean font-semibold mt-2">Desde $999</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d4">Islandia</h3><p class="text-slate-500 text-sm" data-i18n="d4d">Auroras boreales.</p><p class="text-ocean font-semibold mt-2">Desde $1,599</p></div></article>
+ </div>
+</section>
+<section id="paquetes" class="py-24 bg-slate-50">
+ <div class="max-w-6xl mx-auto px-6">
+  <h2 class="font-display text-4xl text-center mb-10" data-i18n="pkg_t">Paquetes</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+   <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm"><h3 class="font-display text-2xl mb-2" data-i18n="p1">Escapada</h3><p class="text-3xl font-bold text-ocean mb-4">$899</p><ul class="space-y-2 text-sm text-slate-600 mb-6"><li>✓ 4 noches</li><li>✓ Vuelo + hotel</li><li>✓ Desayunos</li></ul><a href="#contacto" class="block text-center border border-ocean text-ocean py-3 rounded-full hover:bg-ocean/10 transition" data-i18n="p_cta">Elegir</a></div>
+   <div class="bg-ocean text-white p-8 rounded-2xl scale-105 shadow-xl"><p class="text-xs font-bold uppercase tracking-widest mb-2 opacity-80" data-i18n="p_pop">Popular</p><h3 class="font-display text-2xl mb-2" data-i18n="p2">Aventura</h3><p class="text-3xl font-bold mb-4">$1,499</p><ul class="space-y-2 text-sm mb-6"><li>✓ 7 noches</li><li>✓ Todo incluido</li><li>✓ Excursiones</li><li>✓ Guía local</li></ul><a href="#contacto" class="block text-center bg-white text-ocean py-3 rounded-full font-bold hover:bg-slate-50 transition" data-i18n="p_cta">Elegir</a></div>
+   <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm"><h3 class="font-display text-2xl mb-2" data-i18n="p3">Premium</h3><p class="text-3xl font-bold text-ocean mb-4">$2,399</p><ul class="space-y-2 text-sm text-slate-600 mb-6"><li>✓ 10 noches</li><li>✓ 5 estrellas</li><li>✓ Traslados privados</li><li>✓ Concierge</li></ul><a href="#contacto" class="block text-center border border-ocean text-ocean py-3 rounded-full hover:bg-ocean/10 transition" data-i18n="p_cta">Elegir</a></div>
+  </div>
+ </div>
+</section>
+<section id="contacto" class="py-24 bg-ocean/5 border-y border-ocean/20">
+ <div class="max-w-2xl mx-auto px-6">
+  <div class="text-center mb-8"><h2 class="font-display text-4xl mb-2" data-i18n="ct_t">Cotiza tu viaje</h2><p class="text-slate-600" data-i18n="ct_s">Te respondemos en 24h.</p></div>
+  <form class="grid gap-4 bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+   <input class="border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-ocean" placeholder="Nombre" data-ph="ph_name"/>
+   <input class="border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-ocean" placeholder="Email" data-ph="ph_email"/>
+   <select class="border border-slate-200 rounded-xl px-4 py-3"><option>Bali</option><option>Japón</option><option>Perú</option><option>Islandia</option></select>
+   <textarea rows="3" class="border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-ocean" placeholder="Fechas / viajeros" data-ph="ph_note"></textarea>
+   <button type="button" id="ctBtn" class="bg-ocean text-white py-3 rounded-xl font-semibold hover:bg-ocean/90 transition" data-i18n="ct_btn">Enviar cotización</button>
+   <p id="ctMsg" class="text-center text-ocean text-sm hidden" data-i18n="ct_ok">¡Recibido! Te contactamos pronto.</p>
+  </form>
+ </div>
+</section>
+<footer class="py-8 text-center text-xs text-slate-400">© 2026 Nomad Routes · Portfolio demo</footer>
+<script>
+const dict={es:{n_dest:'Destinos',n_pkg:'Paquetes',n_ct:'Contacto',hero_e:'Aventuras a la medida',hero_t:'Viaja sin límites.',hero_s:'Diseñamos viajes personalizados a los destinos más hermosos del planeta. Vuelos, hoteles, experiencias y guías locales en un solo paquete.',hero_c1:'Cotizar viaje',hero_c2:'Destinos',s1:'Destinos',s2:'Viajeros',s3:'Satisfacción',s4:'Años',dest_t:'Destinos destacados',d1:'Bali',d1d:'Playas y templos.',d2:'Japón',d2d:'Tokio y Kioto.',d3:'Perú',d3d:'Cuzco y Machu Picchu.',d4:'Islandia',d4d:'Auroras boreales.',pkg_t:'Paquetes',p1:'Escapada',p2:'Aventura',p3:'Premium',p_cta:'Elegir',p_pop:'Popular',ct_t:'Cotiza tu viaje',ct_s:'Te respondemos en 24h.',ct_btn:'Enviar cotización',ct_ok:'¡Recibido! Te contactamos pronto.',ph_name:'Nombre',ph_email:'Email',ph_note:'Fechas / viajeros'},en:{n_dest:'Destinations',n_pkg:'Packages',n_ct:'Contact',hero_e:'Tailored adventures',hero_t:'Travel without limits.',hero_s:'We design personalized trips to the most beautiful destinations on earth. Flights, hotels, experiences and local guides in one package.',hero_c1:'Get a quote',hero_c2:'Destinations',s1:'Destinations',s2:'Travelers',s3:'Satisfaction',s4:'Years',dest_t:'Featured destinations',d1:'Bali',d1d:'Beaches and temples.',d2:'Japan',d2d:'Tokyo and Kyoto.',d3:'Peru',d3d:'Cuzco and Machu Picchu.',d4:'Iceland',d4d:'Northern lights.',pkg_t:'Packages',p1:'Getaway',p2:'Adventure',p3:'Premium',p_cta:'Choose',p_pop:'Popular',ct_t:'Get a quote',ct_s:'We reply within 24h.',ct_btn:'Send request',ct_ok:'Received! We will contact you soon.',ph_name:'Name',ph_email:'Email',ph_note:'Dates / travelers'}};
+let lang=localStorage.getItem('lang')||'es';
+function apply(l){lang=l;localStorage.setItem('lang',l);document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(dict[l][k])e.textContent=dict[l][k];});document.querySelectorAll('[data-ph]').forEach(e=>{const k=e.getAttribute('data-ph');if(dict[l][k])e.placeholder=dict[l][k];});document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';}
+document.getElementById('langBtn').addEventListener('click',()=>apply(lang==='es'?'en':'es'));apply(lang);
+document.getElementById('ctBtn').addEventListener('click',()=>document.getElementById('ctMsg').classList.remove('hidden'));
+</script>
+</body></html>

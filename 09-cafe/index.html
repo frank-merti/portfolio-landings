@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Origen Café — Tostadores de especialidad</title>
+<meta name="description" content="Café de especialidad tostado en origen. Brunch, panadería y brewing."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{espresso:'#2a1a10',roast:'#5a3825',cream:'#faf3e8',gold:'#d4a373'},fontFamily:{display:['"Playfair Display"','serif'],body:['Inter','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#faf3e8;color:#2a1a10}.font-display{font-family:'Playfair Display',serif}
+.hero{background:radial-gradient(ellipse at 80% 30%,rgba(212,163,115,.35),transparent 60%),linear-gradient(180deg,#faf3e8,#efe2cf)}
+.card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(90,56,37,.18)}
+</style>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-cream/80 border-b border-roast/10">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <a class="font-display text-2xl text-roast">Origen Café</a>
+  <div class="hidden md:flex gap-8 text-sm"><a href="#menu" data-i18n="n_menu" class="hover:text-roast/70">Menú</a><a href="#about" data-i18n="n_about" class="hover:text-roast/70">Nosotros</a><a href="#locations" data-i18n="n_loc" class="hover:text-roast/70">Sucursales</a></div>
+  <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-roast/30 hover:bg-roast/10 transition">EN</button>
+ </nav>
+</header>
+<section class="hero min-h-screen flex items-center pt-20">
+ <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+   <p class="text-gold tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_e">Tostado en origen · Desde 2018</p>
+   <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6" data-i18n="hero_t">Café que sabe a más.</h1>
+   <p class="text-roast/70 text-lg max-w-xl mb-8" data-i18n="hero_s">Granos de especialidad, tostado artesanal y un bar donde cada taza cuenta una historia. Brunch, panadería y brewing para ti.</p>
+   <div class="flex gap-4"><a href="#menu" class="bg-roast text-cream px-7 py-3 rounded-full font-semibold hover:bg-roast/90 transition" data-i18n="hero_c1">Ver menú</a><a href="#locations" class="border border-roast/30 px-7 py-3 rounded-full hover:bg-roast/5 transition" data-i18n="hero_c2">Sucursales</a></div>
+  </div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+ </div>
+</section>
+<section id="about" class="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+ <div class="aspect-square rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559496419-e6af22fb398c?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+ <div>
+  <h2 class="font-display text-4xl mb-6" data-i18n="about_t">Del grano a la taza.</h2>
+  <p class="text-roast/70 leading-relaxed mb-4" data-i18n="about_p">Compramos directo a productores en Veracruz, Oaxaca y Chiapas. Tostamos en lotes pequeños y servimos con técnicas de brewing: V60, aeropress, espresso.</p>
+  <div class="flex gap-10 mt-6"><div><p class="font-display text-3xl text-gold">6</p><p class="text-xs uppercase tracking-widest" data-i18n="a1">Orígenes</p></div><div><p class="font-display text-3xl text-gold">2</p><p class="text-xs uppercase tracking-widest" data-i18n="a2">Sucursales</p></div><div><p class="font-display text-3xl text-gold">40+</p><p class="text-xs uppercase tracking-widest" data-i18n="a3">Recetas</p></div></div>
+ </div>
+</section>
+<section id="menu" class="py-24 bg-white/60">
+ <div class="max-w-7xl mx-auto px-6">
+  <div class="text-center mb-12"><h2 class="font-display text-4xl mb-3" data-i18n="menu_t">Menú destacado</h2><p class="text-roast/60" data-i18n="menu_s">Café, brunch y panadería.</p></div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m1">Espresso doble</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m1d"> Blend de temporada.</p><p class="text-gold font-semibold">$55</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m2">Latte de vainilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m2d">Leche de avena opcional.</p><p class="text-gold font-semibold">$70</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1541592553191-94127a1cfe55?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m3">Avocado toast</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m3d">Pan de masa madre.</p><p class="text-gold font-semibold">$110</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m4">Croissant de mantequilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m4d">Horneado cada mañana.</p><p class="text-gold font-semibold">$45</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m5">Cold brew tonic</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m5d">Refrescante y cítrico.</p><p class="text-gold font-semibold">$75</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m6">Pour over V60</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m6d">Single origin, filtrado.</p><p class="text-gold font-semibold">$65</p></div></article>
+  </div>
+ </div>
+</section>
+<section id="locations" class="py-24 bg-roast text-cream">
+ <div class="max-w-6xl mx-auto px-6 text-center">
+  <h2 class="font-display text-4xl mb-8" data-i18n="loc_t">Sucursales</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+   <div class="bg-cream/5 p-8 rounded-2xl border border-cream/10"><h3 class="font-display text-2xl mb-2" data-i18n="l1">Casa Matriz</h3><p class="text-cream/70 text-sm">Av. Principal 100 · Lun–Dom 7:00–20:00</p></div>
+   <div class="bg-cream/5 p-8 rounded-2xl border border-cream/10"><h3 class="font-display text-2xl mb-2" data-i18n="l2">Sucursal Centro</h3><p class="text-cream/70 text-sm">Calle Naranjos 52 · Lun–Dom 8:00–21:00</p></div>
+  </div>
+ </div>
+</section>
+<footer class="py-8 text-center text-xs text-roast/40">© 2026 Origen Café · Portfolio demo</footer>
+<script>
+const dict={es:{n_menu:'Menú',n_about:'Nosotros',n_loc:'Sucursales',hero_e:'Tostado en origen · Desde 2018',hero_t:'Café que sabe a más.',hero_s:'Granos de especialidad, tostado artesanal y un bar donde cada taza cuenta una historia. Brunch, panadería y brewing para ti.',hero_c1:'Ver menú',hero_c2:'Sucursales',about_t:'Del grano a la taza.',about_p:'Compramos directo a productores en Veracruz, Oaxaca y Chiapas. Tostamos en lotes pequeños y servimos con técnicas de brewing: V60, aeropress, espresso.',a1:'Orígenes',a2:'Sucursales',a3:'Recetas',menu_t:'Menú destacado',menu_s:'Café, brunch y panadería.',m1:'Espresso doble',m1d:' Blend de temporada.',m2:'Latte de vainilla',m2d:'Leche de avena opcional.',m3:'Avocado toast',m3d:'Pan de masa madre.',m4:'Croissant de mantequilla',m4d:'Horneado cada mañana.',m5:'Cold brew tonic',m5d:'Refrescante y cítrico.',m6:'Pour over V60',m6d:'Single origin, filtrado.',loc_t:'Sucursales',l1:'Casa Matriz',l2:'Sucursal Centro'},en:{n_menu:'Menu',n_about:'About',n_loc:'Locations',hero_e:'Roasted at origin · Since 2018',hero_t:'Coffee that tastes like more.',hero_s:'Specialty beans, artisan roast and a bar where every cup tells a story. Brunch, bakery and brewing for you.',hero_c1:'View menu',hero_c2:'Locations',about_t:'From bean to cup.',about_p:'We buy direct from growers in Veracruz, Oaxaca and Chiapas. We roast in small batches and serve with brewing techniques: V60, aeropress, espresso.',a1:'Origins',a2:'Locations',a3:'Recipes',menu_t:'Featured menu',menu_s:'Coffee, brunch and bakery.',m1:'Double espresso',m1d:'Season blend.',m2:'Vanilla latte',m2d:'Oat milk optional.',m3:'Avocado toast',m3d:'Sourdough bread.',m4:'Butter croissant',m4d:'Baked every morning.',m5:'Cold brew tonic',m5d:'Refreshing and citrus.',m6:'Pour over V60',m6d:'Single origin, filtered.',loc_t:'Locations',l1:'Flagship store',l2:'Downtown branch'}};
+let lang=localStorage.getItem('lang')||'es';
+function apply(l){lang=l;localStorage.setItem('lang',l);document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(dict[l][k])e.textContent=dict[l][k];});document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';}
+document.getElementById('langBtn').addEventListener('click',()=>apply(lang==='es'?'en':'es'));apply(lang);
+</script>
+</body></html>

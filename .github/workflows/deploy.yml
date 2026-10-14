@@ -76,6 +76,10 @@ jobs:
           cp -a 04-gimnasio _site/
           cp -a 05-inmobiliaria _site/
           cp -a 06-evento _site/
+          cp -a 09-cafe _site/
+          cp -a 10-travel _site/
+          cp -a 11-academy _site/
+          cp -a 12-clinic _site/
           mkdir -p _site/01-agency-next
           cp -a 01-agency-next/out/. _site/01-agency-next/
           mkdir -p _site/02-saas-next
@@ -115,6 +119,10 @@ jobs:
               <a href="./06-evento/"><h2>DevConf 2026</h2><small>HTML · Evento tech</small></a>
               <a href="./07-producto-react/"><h2>Aether H1</h2><small>React · Audífonos</small></a>
               <a href="./08-portfolio-next/"><h2>Portafolio personal</h2><small>Next.js · Portafolio</small></a>
+              <a href="./09-cafe/"><h2>Origen Café</h2><small>HTML · Cafetería</small></a>
+              <a href="./10-travel/"><h2>Nomad Routes</h2><small>HTML · Viajes</small></a>
+              <a href="./11-academy/"><h2>SkillStack Academy</h2><small>HTML · Educación</small></a>
+              <a href="./12-clinic/"><h2>NovaClinic</h2><small>HTML · Salud</small></a>
             </div>
           </body>
           </html>
