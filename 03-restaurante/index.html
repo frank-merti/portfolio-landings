@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Brasa — Restaurante de fuego & sabores</title>
+  <meta name="description" content="La Brasa: restaurante de carnes y sabores al fuego. Reserva tu mesa." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ember: '#e25822', coal: '#1a120b', gold: '#d4a373', cream: '#fef3e6' },
+      fontFamily: { display: ['"Playfair Display"', 'serif'], body: ['Inter', 'sans-serif'] }
+    }}}
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .hero { background: radial-gradient(ellipse at 60% 40%, rgba(226,88,34,.35), transparent 60%), linear-gradient(180deg,#1a120b 0%,#2a1a10 100%); }
+    .card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -10px rgba(226,88,34,.25); }
+    .nav-blur { backdrop-filter: blur(10px); background: rgba(26,18,11,.75); }
+    [data-i18n] { transition: opacity .2s; }
+  </style>
+</head>
+<body class="bg-coal text-cream antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 nav-blur border-b border-white/5">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="font-display text-2xl text-gold tracking-wide">La Brasa</a>
+      <div class="hidden md:flex gap-8 text-sm">
+        <a href="#about" data-i18n="nav_about" class="hover:text-ember transition">Nosotros</a>
+        <a href="#menu" data-i18n="nav_menu" class="hover:text-ember transition">Menú</a>
+        <a href="#gallery" data-i18n="nav_gallery" class="hover:text-ember transition">Galería</a>
+        <a href="#reservar" data-i18n="nav_reserve" class="hover:text-ember transition">Reservar</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-gold/40 hover:bg-gold/10 transition">EN</button>
+        <a href="#reservar" data-i18n="cta_reserve" class="hidden sm:inline-block bg-ember px-4 py-2 rounded-full text-sm font-semibold hover:bg-ember/90 transition">Reservar mesa</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero min-h-screen flex items-center relative overflow-hidden pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-ember tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_eyebrow">Desde 2014 · Fuego & Origen</p>
+        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-6" data-i18n="hero_title">El fuego que reúne a la mesa.</h1>
+        <p class="text-cream/70 text-lg max-w-xl mb-8" data-i18n="hero_sub">Carnes maduradas, brasas de encina y recetas de la abuela. Una experiencia gastronómica que se siente como volver a casa.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#reservar" class="bg-ember px-7 py-3 rounded-full font-semibold hover:bg-ember/90 transition" data-i18n="hero_cta1">Reservar mesa</a>
+          <a href="#menu" class="border border-cream/30 px-7 py-3 rounded-full hover:bg-cream/5 transition" data-i18n="hero_cta2">Ver menú</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Plato" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-coal/90 backdrop-blur px-6 py-4 rounded-2xl border border-gold/30">
+          <p class="text-xs text-cream/60" data-i18n="hero_badge_l">Calificación</p>
+          <p class="font-display text-2xl text-gold" data-i18n="hero_badge_v">4.9 ★ · 1.2k reseñas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <div class="grid grid-cols-2 gap-4">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full mt-8" alt="">
+    </div>
+    <div>
+      <h2 class="font-display text-4xl mb-6" data-i18n="about_title">Una cocina que respeta el origen.</h2>
+      <p class="text-cream/70 leading-relaxed mb-4" data-i18n="about_p1">Seleccionamos ganado de prados locales, vegetales de temporada y una leña que aporta ese ahumado imposible de imitar. Cada plato pasa por la parrilla y sale con una historia.</p>
+      <p class="text-cream/70 leading-relaxed mb-8" data-i18n="about_p2">Espacio íntimo de 40 cubiertos, chimenea central y una barra de vinos con más de 120 etiquetas mexicanas y europeas.</p>
+      <div class="flex gap-10">
+        <div><p class="font-display text-3xl text-gold">10</p><p class="text-xs text-cream/60 uppercase tracking-widest" data-i18n="about_stat1">Años</p></div>
+        <div><p class="font-display text-3xl text-gold">40</p><p class="text-xs text-cream/60 uppercase tracking-widest" data-i18n="about_stat2">Cubiertos</p></div>
+        <div><p class="font-display text-3xl text-gold">120+</p><p class="text-xs text-cream/60 uppercase tracking-widest" data-i18n="about_stat3">Vinos</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="py-24 bg-gradient-to-b from-transparent to-black/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-4xl mb-3" data-i18n="menu_title">Menú destacado</h2>
+        <p class="text-cream/60" data-i18n="menu_sub">Pequeña carta, grandes intenciones.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1544025162-d766942673bf?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m1_t">Tomahawk 1.2 kg</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m1_d">Madurado 45 días, chimichurri de la casa.</p>
+            <p class="text-gold font-semibold">$840 MXN</p>
+          </div>
+        </article>
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m2_t">Burrata ahumada</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m2_d">Tomate criollo, pesto de nuez y aceite de oliva.</p>
+            <p class="text-gold font-semibold">$260 MXN</p>
+          </div>
+        </article>
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m3_t">Ensalada de temporada</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m3_d">Hortalizas del mercado, queso de cabra, miel.</p>
+            <p class="text-gold font-semibold">$190 MXN</p>
+          </div>
+        </article>
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m4_t">Costilla BBQ</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m4_d">6 horas de fuego lento, salsa de tamarindo.</p>
+            <p class="text-gold font-semibold">$420 MXN</p>
+          </div>
+        </article>
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m5_t">Flan de vainilla</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m5_d">Caramelo oscuro, crema y flor de sal.</p>
+            <p class="text-gold font-semibold">$120 MXN</p>
+          </div>
+        </article>
+        <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
+          <img src="https://images.unsplash.com/photo-1514362543477-311a55294a27?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <div class="p-5">
+            <h3 class="font-display text-xl mb-1" data-i18n="m6_t">Cóctel Brasa</h3>
+            <p class="text-cream/60 text-sm mb-3" data-i18n="m6_d">Mezcal, limón y chile ancho ahumado.</p>
+            <p class="text-gold font-semibold">$180 MXN</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-24 max-w-7xl mx-auto px-6">
+    <h2 class="font-display text-4xl mb-8 text-center" data-i18n="gal_title">Galería</h2>
+    <div class="columns-2 md:columns-3 gap-4 space-y-4">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section id="reservar" class="py-24 bg-ember/5 border-y border-ember/20">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-4xl mb-3" data-i18n="res_title">Reserva tu mesa</h2>
+        <p class="text-cream/60" data-i18n="res_sub">Te confirmamos en menos de 1 hora.</p>
+      </div>
+      <form class="grid sm:grid-cols-2 gap-5 bg-coal/60 p-8 rounded-3xl border border-white/5">
+        <input type="text" placeholder="Nombre" data-ph="ph_name" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 placeholder:text-cream/40 focus:outline-none focus:border-ember">
+        <input type="tel" placeholder="Teléfono" data-ph="ph_phone" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 placeholder:text-cream/40 focus:outline-none focus:border-ember">
+        <input type="date" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-cream/80 focus:outline-none focus:border-ember">
+        <select class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-cream/80">
+          <option>2 personas</option><option>4 personas</option><option>6 personas</option><option>8+ personas</option>
+        </select>
+        <textarea rows="3" data-ph="ph_note" class="sm:col-span-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 placeholder:text-cream/40 focus:outline-none focus:border-ember" placeholder="Notas (alergias, celebración...)"></textarea>
+        <button type="button" id="resBtn" class="sm:col-span-2 bg-ember py-3 rounded-xl font-semibold hover:bg-ember/90 transition" data-i18n="res_btn">Enviar reserva</button>
+        <p id="resMsg" class="sm:col-span-2 text-center text-gold text-sm hidden" data-i18n="res_ok">¡Gracias! Te confirmaremos pronto.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-sm text-cream/60">
+      <div>
+        <p class="font-display text-xl text-gold mb-2">La Brasa</p>
+        <p data-i18n="ft_desc">Cocina de fuego en el corazón de la ciudad.</p>
+      </div>
+      <div>
+        <p class="font-semibold text-cream mb-2" data-i18n="ft_hours">Horarios</p>
+        <p>Mar–Dom · 13:00 – 23:00</p>
+        <p>Lunes cerrado</p>
+      </div>
+      <div>
+        <p class="font-semibold text-cream mb-2" data-i18n="ft_contact">Contacto</p>
+        <p>Av. Principal 123, Toluca</p>
+        <p>+52 722 123 4567</p>
+      </div>
+    </div>
+    <p class="text-center text-xs text-cream/30 mt-8">© 2026 La Brasa. Portfolio demo.</p>
+  </footer>
+
+  <script>
+    const dict = {
+      es: {
+        nav_about:'Nosotros', nav_menu:'Menú', nav_gallery:'Galería', nav_reserve:'Reservar',
+        cta_reserve:'Reservar mesa', hero_eyebrow:'Desde 2014 · Fuego & Origen',
+        hero_title:'El fuego que reúne a la mesa.', hero_sub:'Carnes maduradas, brasas de encina y recetas de la abuela. Una experiencia gastronómica que se siente como volver a casa.',
+        hero_cta1:'Reservar mesa', hero_cta2:'Ver menú', hero_badge_l:'Calificación', hero_badge_v:'4.9 ★ · 1.2k reseñas',
+        about_title:'Una cocina que respeta el origen.', about_p1:'Seleccionamos ganado de prados locales, vegetales de temporada y una leña que aporta ese ahumado imposible de imitar. Cada plato pasa por la parrilla y sale con una historia.',
+        about_p2:'Espacio íntimo de 40 cubiertos, chimenea central y una barra de vinos con más de 120 etiquetas mexicanas y europeas.',
+        about_stat1:'Años', about_stat2:'Cubiertos', about_stat3:'Vinos',
+        menu_title:'Menú destacado', menu_sub:'Pequeña carta, grandes intenciones.',
+        m1_t:'Tomahawk 1.2 kg', m1_d:'Madurado 45 días, chimichurri de la casa.',
+        m2_t:'Burrata ahumada', m2_d:'Tomate criollo, pesto de nuez y aceite de oliva.',
+        m3_t:'Ensalada de temporada', m3_d:'Hortalizas del mercado, queso de cabra, miel.',
+        m4_t:'Costilla BBQ', m4_d:'6 horas de fuego lento, salsa de tamarindo.',
+        m5_t:'Flan de vainilla', m5_d:'Caramelo oscuro, crema y flor de sal.',
+        m6_t:'Cóctel Brasa', m6_d:'Mezcal, limón y chile ancho ahumado.',
+        gal_title:'Galería', res_title:'Reserva tu mesa', res_sub:'Te confirmamos en menos de 1 hora.',
+        ph_name:'Nombre', ph_phone:'Teléfono', ph_note:'Notas (alergias, celebración...)',
+        res_btn:'Enviar reserva', res_ok:'¡Gracias! Te confirmaremos pronto.',
+        ft_desc:'Cocina de fuego en el corazón de la ciudad.', ft_hours:'Horarios', ft_contact:'Contacto'
+      },
+      en: {
+        nav_about:'About', nav_menu:'Menu', nav_gallery:'Gallery', nav_reserve:'Reserve',
+        cta_reserve:'Book a table', hero_eyebrow:'Since 2014 · Fire & Origin',
+        hero_title:'The fire that gathers the table.', hero_sub:'Aged cuts, holm-oak embers and grandmother\'s recipes. A dining experience that feels like coming home.',
+        hero_cta1:'Book a table', hero_cta2:'View menu', hero_badge_l:'Rating', hero_badge_v:'4.9 ★ · 1.2k reviews',
+        about_title:'A kitchen that respects origin.', about_p1:'We select cattle from local pastures, seasonal vegetables and wood that delivers an unrepeatable smokiness. Every dish passes the grill carrying a story.',
+        about_p2:'An intimate 40-seat space, central fireplace and a wine bar with 120+ Mexican and European labels.',
+        about_stat1:'Years', about_stat2:'Seats', about_stat3:'Wines',
+        menu_title:'Featured menu', menu_sub:'Small card, big intentions.',
+        m1_t:'Tomahawk 1.2 kg', m1_d:'45-day aged, house chimichurri.',
+        m2_t:'Smoked burrata', m2_d:'Heirloom tomato, walnut pesto, olive oil.',
+        m3_t:'Season salad', m3_d:'Market greens, goat cheese, honey.',
+        m4_t:'BBQ ribs', m4_d:'6 hours slow fire, tamarind glaze.',
+        m5_t:'Vanilla flan', m5_d:'Dark caramel, cream and sea salt.',
+        m6_t:'Brasa cocktail', m6_d:'Mezcal, lemon and smoked ancho chili.',
+        gal_title:'Gallery', res_title:'Book your table', res_sub:'We confirm within an hour.',
+        ph_name:'Name', ph_phone:'Phone', ph_note:'Notes (allergies, celebration...)',
+        res_btn:'Send reservation', res_ok:'Thanks! We\'ll confirm soon.',
+        ft_desc:'Fire kitchen in the heart of the city.', ft_hours:'Hours', ft_contact:'Contact'
+      }
+    };
+    let lang = localStorage.getItem('lang') || 'es';
+    const phMap = { ph_name:'placeholder', ph_phone:'placeholder', ph_note:'placeholder' };
+    function applyLang(l){
+      lang = l; localStorage.setItem('lang', l);
+      document.documentElement.lang = l;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (dict[l][k]) el.textContent = dict[l][k];
+      });
+      document.querySelectorAll('[data-ph]').forEach(el => {
+        const k = el.getAttribute('data-ph');
+        if (dict[l][k]) el.placeholder = dict[l][k];
+      });
+      document.getElementById('langBtn').textContent = l === 'es' ? 'EN' : 'ES';
+    }
+    document.getElementById('langBtn').addEventListener('click', () => applyLang(lang==='es'?'en':'es'));
+    applyLang(lang);
+    document.getElementById('resBtn').addEventListener('click', () => {
+      const m = document.getElementById('resMsg'); m.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

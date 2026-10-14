@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Altura Homes — Bienes Raíces Premium</title>
+<meta name="description" content="Altura Homes: propiedades exclusivas en zonas prime."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:'#0a1628',slate:'#13203a',mist:'#e8edf5',gold:'#c9a961'},fontFamily:{display:['"Cormorant Garamond"','serif'],body:['Inter','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+ body{font-family:Inter,sans-serif} .font-display{font-family:'Cormorant Garamond',serif}
+ .hero{background:linear-gradient(180deg,rgba(10,22,40,.4),rgba(10,22,40,.85)),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+ .card-hover{transition:transform .3s ease,box-shadow .3s ease} .card-hover:hover{transform:translateY(-6px);box-shadow:0 22px 44px -12px rgba(201,169,97,.18)}
+</style>
+</head>
+<body class="bg-navy text-mist antialiased">
+
+<header class="fixed top-0 w-full z-50 backdrop-blur bg-navy/70 border-b border-white/5">
+ <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <a class="font-display text-2xl tracking-widest text-gold">ALTURA HOMES</a>
+  <div class="hidden md:flex gap-8 text-sm tracking-wide">
+   <a href="#props" data-i18n="n_props" class="hover:text-gold transition">Propiedades</a>
+   <a href="#services" data-i18n="n_serv" class="hover:text-gold transition">Servicios</a>
+   <a href="#agents" data-i18n="n_age" class="hover:text-gold transition">Agentes</a>
+   <a href="#contact" data-i18n="n_cont" class="hover:text-gold transition">Contacto</a>
+  </div>
+  <div class="flex items-center gap-3">
+   <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-gold/40 hover:bg-gold/10 transition">EN</button>
+   <a href="#contact" class="bg-gold text-navy px-5 py-2 rounded-full text-sm font-semibold hover:bg-gold/90 transition" data-i18n="n_cta">Agendar visita</a>
+  </div>
+ </nav>
+</header>
+
+<section class="hero min-h-screen flex items-center pt-20">
+ <div class="max-w-7xl mx-auto px-6 w-full">
+  <p class="text-gold tracking-[.3em] text-xs mb-4 uppercase" data-i18n="hero_e">Bienes raíces premium</p>
+  <h1 class="font-display text-5xl md:text-7xl leading-tight max-w-3xl mb-6" data-i18n="hero_t">Donde tu patrimonio cobra altura.</h1>
+  <p class="text-mist/70 text-lg max-w-xl mb-8" data-i18n="hero_s">Propiedades selectas en zonas de alta plusvalía. Asesoría integral de compra, venta e inversión.</p>
+  <div class="flex flex-wrap gap-4">
+   <a href="#props" class="bg-gold text-navy px-7 py-3 rounded-full font-semibold hover:bg-gold/90 transition" data-i18n="hero_c1">Ver propiedades</a>
+   <a href="#contact" class="border border-mist/30 px-7 py-3 rounded-full hover:bg-mist/5 transition" data-i18n="hero_c2">Contactar</a>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
+   <div><p class="font-display text-4xl text-gold">240+</p><p class="text-xs text-mist/60 uppercase tracking-widest" data-i18n="s1">Propiedades</p></div>
+   <div><p class="font-display text-4xl text-gold">$2.1B</p><p class="text-xs text-mist/60 uppercase tracking-widest" data-i18n="s2">Vendidos</p></div>
+   <div><p class="font-display text-4xl text-gold">18</p><p class="text-xs text-mist/60 uppercase tracking-widest" data-i18n="s3">Años</p></div>
+   <div><p class="font-display text-4xl text-gold">98%</p><p class="text-xs text-mist/60 uppercase tracking-widest" data-i18n="s4">Satisfacción</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="props" class="py-24 max-w-7xl mx-auto px-6">
+ <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+  <div>
+   <h2 class="font-display text-5xl mb-2" data-i18n="pr_title">Propiedades destacadas</h2>
+   <p class="text-mist/60" data-i18n="pr_sub">Residencias seleccionadas por nuestro equipo.</p>
+  </div>
+  <div class="flex gap-2 text-xs">
+   <button class="px-4 py-2 rounded-full bg-gold text-navy" data-i18n="f1">Venta</button>
+   <button class="px-4 py-2 rounded-full border border-white/15" data-i18n="f2">Renta</button>
+   <button class="px-4 py-2 rounded-full border border-white/15" data-i18n="f3">Inversión</button>
+  </div>
+ </div>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$8.4M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p1_t">Casa Lomas</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p1_d">4 rec, 3.5 baños, 320m², terraza y alberca.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🛏 4</span><span>🛁 3.5</span><span>📐 320m²</span></div>
+   </div>
+  </article>
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$12.9M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p2_t">Penthouse Skyline</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p2_d">3 rec, roof garden, vista panorámica.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🛏 3</span><span>🛁 3</span><span>📐 280m²</span></div>
+   </div>
+  </article>
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$6.2M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p3_t">Terreno Bosque</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p3_d">1200m², escriturado, servicios disponibles.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🌲 1200m²</span><span>📄 Escritura</span></div>
+   </div>
+  </article>
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d20166?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$4.1M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p4_t">Depto Centro</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p4_d">2 rec, amenidades, estacionamiento.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🛏 2</span><span>🛁 2</span><span>📐 95m²</span></div>
+   </div>
+  </article>
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$15.5M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p5_t">Villa Jardín</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p5_d">5 rec, jardín, alberca, seguridad 24h.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🛏 5</span><span>🛁 4</span><span>📐 450m²</span></div>
+   </div>
+  </article>
+  <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
+   <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <div class="p-5">
+    <p class="text-gold font-display text-2xl mb-1">$3.3M MXN</p>
+    <h3 class="font-display text-xl mb-2" data-i18n="p6_t">Loft Industrial</h3>
+    <p class="text-mist/60 text-sm mb-3" data-i18n="p6_d">Doble altura, diseño open-space.</p>
+    <div class="flex gap-4 text-xs text-mist/50"><span>🛏 1</span><span>🛁 1.5</span><span>📐 110m²</span></div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<section id="services" class="py-24 bg-slate/40">
+ <div class="max-w-6xl mx-auto px-6">
+  <h2 class="font-display text-5xl text-center mb-12" data-i18n="sv_title">Servicios</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+   <div class="bg-navy/60 p-8 rounded-2xl border border-white/5">
+    <h3 class="font-display text-2xl mb-3" data-i18n="sv1_t">Compra</h3>
+    <p class="text-mist/60 text-sm" data-i18n="sv1_d">Búsqueda personalizada, valuación y cierre seguro.</p>
+   </div>
+   <div class="bg-navy/60 p-8 rounded-2xl border border-white/5">
+    <h3 class="font-display text-2xl mb-3" data-i18n="sv2_t">Venta</h3>
+    <p class="text-mist/60 text-sm" data-i18n="sv2_d">Marketing premium y negociación experta.</p>
+   </div>
+   <div class="bg-navy/60 p-8 rounded-2xl border border-white/5">
+    <h3 class="font-display text-2xl mb-3" data-i18n="sv3_t">Inversión</h3>
+    <p class="text-mist/60 text-sm" data-i18n="sv3_d">Análisis de plusvalía y portafolios inmobiliarios.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="agents" class="py-24 max-w-6xl mx-auto px-6 text-center">
+ <h2 class="font-display text-5xl mb-10" data-i18n="ag_title">Agentes</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+   <p class="font-display text-xl">Sofía Andrade</p><p class="text-xs text-mist/60">Directora</p></div>
+  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+   <p class="font-display text-xl">Carlos Mena</p><p class="text-xs text-mist/60">Asesor senior</p></div>
+  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+   <p class="font-display text-xl">Marina López</p><p class="text-xs text-mist/60">Inversiones</p></div>
+ </div>
+</section>
+
+<section id="contact" class="py-24 bg-gold/5 border-y border-gold/20">
+ <div class="max-w-3xl mx-auto px-6">
+  <div class="text-center mb-10">
+   <h2 class="font-display text-5xl mb-3" data-i18n="ct_title">Agenda una visita</h2>
+   <p class="text-mist/60" data-i18n="ct_sub">Te contactamos en menos de 24 horas.</p>
+  </div>
+  <form class="grid sm:grid-cols-2 gap-5 bg-navy/60 p-8 rounded-3xl border border-white/5">
+   <input type="text" data-ph="ph_name" placeholder="Nombre" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold"/>
+   <input type="tel" data-ph="ph_phone" placeholder="Teléfono" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold"/>
+   <input type="email" placeholder="Email" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold"/>
+   <select class="bg-white/5 border border-white/10 rounded-xl px-4 py-3"><option>Venta</option><option>Renta</option><option>Inversión</option></select>
+   <textarea rows="3" data-ph="ph_note" placeholder="Mensaje" class="sm:col-span-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold"></textarea>
+   <button type="button" id="ctBtn" class="sm:col-span-2 bg-gold text-navy py-3 rounded-xl font-semibold hover:bg-gold/90 transition" data-i18n="ct_btn">Enviar</button>
+   <p id="ctMsg" class="sm:col-span-2 text-center text-gold text-sm hidden" data-i18n="ct_ok">Recibido. Te contactamos pronto.</p>
+  </form>
+ </div>
+</section>
+
+<footer class="py-10 border-t border-white/5 text-center text-xs text-mist/40">
+ © 2026 Altura Homes · Portfolio demo
+</footer>
+
+<script>
+const dict={es:{
+ n_props:'Propiedades',n_serv:'Servicios',n_age:'Agentes',n_cont:'Contacto',n_cta:'Agendar visita',
+ hero_e:'Bienes raíces premium',hero_t:'Donde tu patrimonio cobra altura.',hero_s:'Propiedades selectas en zonas de alta plusvalía. Asesoría integral de compra, venta e inversión.',
+ hero_c1:'Ver propiedades',hero_c2:'Contactar',s1:'Propiedades',s2:'Vendidos',s3:'Años',s4:'Satisfacción',
+ pr_title:'Propiedades destacadas',pr_sub:'Residencias seleccionadas por nuestro equipo.',f1:'Venta',f2:'Renta',f3:'Inversión',
+ p1_t:'Casa Lomas',p1_d:'4 rec, 3.5 baños, 320m², terraza y alberca.',
+ p2_t:'Penthouse Skyline',p2_d:'3 rec, roof garden, vista panorámica.',
+ p3_t:'Terreno Bosque',p3_d:'1200m², escriturado, servicios disponibles.',
+ p4_t:'Depto Centro',p4_d:'2 rec, amenidades, estacionamiento.',
+ p5_t:'Villa Jardín',p5_d:'5 rec, jardín, alberca, seguridad 24h.',
+ p6_t:'Loft Industrial',p6_d:'Doble altura, diseño open-space.',
+ sv_title:'Servicios',sv1_t:'Compra',sv1_d:'Búsqueda personalizada, valuación y cierre seguro.',
+ sv2_t:'Venta',sv2_d:'Marketing premium y negociación experta.',
+ sv3_t:'Inversión',sv3_d:'Análisis de plusvalía y portafolios inmobiliarios.',
+ ag_title:'Agentes',ct_title:'Agenda una visita',ct_sub:'Te contactamos en menos de 24 horas.',ct_btn:'Enviar',ct_ok:'Recibido. Te contactamos pronto.',
+ ph_name:'Nombre',ph_phone:'Teléfono',ph_note:'Mensaje'
+},en:{
+ n_props:'Properties',n_serv:'Services',n_age:'Agents',n_cont:'Contact',n_cta:'Book a visit',
+ hero_e:'Premium real estate',hero_t:'Where your assets gain height.',hero_s:'Select properties in high-appreciation zones. Full advisory for buying, selling and investing.',
+ hero_c1:'View properties',hero_c2:'Contact',s1:'Properties',s2:'Sold',s3:'Years',s4:'Satisfaction',
+ pr_title:'Featured properties',pr_sub:'Residences hand-picked by our team.',f1:'Sale',f2:'Rent',f3:'Invest',
+ p1_t:'Lomas House',p1_d:'4 bed, 3.5 bath, 320m², terrace & pool.',
+ p2_t:'Skyline Penthouse',p2_d:'3 bed, roof garden, panoramic view.',
+ p3_t:'Forest Land',p3_d:'1200m², titled, utilities available.',
+ p4_t:'Downtown Apt',p4_d:'2 bed, amenities, parking.',
+ p5_t:'Garden Villa',p5_d:'5 bed, garden, pool, 24h security.',
+ p6_t:'Industrial Loft',p6_d:'Double height, open-space layout.',
+ sv_title:'Services',sv1_t:'Buy',sv1_d:'Personalized search, valuation and safe closing.',
+ sv2_t:'Sell',sv2_d:'Premium marketing and expert negotiation.',
+ sv3_t:'Invest',sv3_d:'Appreciation analysis and real-estate portfolios.',
+ ag_title:'Agents',ct_title:'Schedule a visit',ct_sub:'We contact you within 24 hours.',ct_btn:'Send',ct_ok:'Received. We\'ll contact you soon.',
+ ph_name:'Name',ph_phone:'Phone',ph_note:'Message'
+}};
+let lang=localStorage.getItem('lang')||'es';
+function apply(l){lang=l;localStorage.setItem('lang',l);document.documentElement.lang=l;
+ document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(dict[l][k])e.textContent=dict[l][k];});
+ document.querySelectorAll('[data-ph]').forEach(e=>{const k=e.getAttribute('data-ph');if(dict[l][k])e.placeholder=dict[l][k];});
+ document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';
+}
+document.getElementById('langBtn').addEventListener('click',()=>apply(lang==='es'?'en':'es'));
+apply(lang);
+document.getElementById('ctBtn').addEventListener('click',()=>{document.getElementById('ctMsg').classList.remove('hidden');});
+</script>
+</body></html>
