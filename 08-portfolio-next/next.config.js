@@ -1,2 +1,14 @@
+const isGhPages = process.env.GITHUB_PAGES === 'true'
+const repo = process.env.REPO_NAME || 'portfolio-landings'
+const basePath = isGhPages ? `/${repo}/08-portfolio-next` : ''
+
 /** @type {import('next').NextConfig} */
-module.exports = { reactStrictMode: true }
+const nextConfig = {
+  reactStrictMode: true,
+  ...(isGhPages && {
+    output: 'export',
+    basePath,
+    images: { unoptimized: true },
+  }),
+}
+module.exports = nextConfig

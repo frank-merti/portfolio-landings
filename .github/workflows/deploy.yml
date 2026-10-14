@@ -1,0 +1,137 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: |
+            01-agency-next/package-lock.json
+            02-saas-next/package-lock.json
+            07-producto-react/package-lock.json
+            08-portfolio-next/package-lock.json
+
+      - name: Build 01-agency-next
+        working-directory: 01-agency-next
+        env:
+          GITHUB_PAGES: 'true'
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build 02-saas-next
+        working-directory: 02-saas-next
+        env:
+          GITHUB_PAGES: 'true'
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build 08-portfolio-next
+        working-directory: 08-portfolio-next
+        env:
+          GITHUB_PAGES: 'true'
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build 07-producto-react
+        working-directory: 07-producto-react
+        env:
+          GITHUB_PAGES: 'true'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Assemble site
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site
+          cp -a 03-restaurante _site/
+          cp -a 04-gimnasio _site/
+          cp -a 05-inmobiliaria _site/
+          cp -a 06-evento _site/
+          mkdir -p _site/01-agency-next
+          cp -a 01-agency-next/out/. _site/01-agency-next/
+          mkdir -p _site/02-saas-next
+          cp -a 02-saas-next/out/. _site/02-saas-next/
+          mkdir -p _site/07-producto-react
+          cp -a 07-producto-react/dist/. _site/07-producto-react/
+          mkdir -p _site/08-portfolio-next
+          cp -a 08-portfolio-next/out/. _site/08-portfolio-next/
+          # landing index at root listing all projects
+          cat > _site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+            <title>Portfolio de Landings</title>
+            <style>
+              body{font-family:system-ui,sans-serif;background:#0b0f1a;color:#f5f7fa;margin:0;padding:40px 20px}
+              h1{text-align:center;margin-bottom:8px}
+              p{text-align:center;opacity:.7;margin-bottom:32px}
+              .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:1100px;margin:0 auto}
+              a{display:block;background:#11162a;padding:20px;border-radius:12px;color:#f5f7fa;text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:.2s}
+              a:hover{border-color:#6366f1;transform:translateY(-2px)}
+              h2{margin:0 0 6px;font-size:1.1rem}
+              small{opacity:.6}
+            </style>
+          </head>
+          <body>
+            <h1>Portfolio de Landings</h1>
+            <p>Selecciona un proyecto para verlo en vivo.</p>
+            <div class="grid">
+              <a href="./01-agency-next/"><h2>Nebula Studio</h2><small>Next.js · Agencia digital</small></a>
+              <a href="./02-saas-next/"><h2>Flowboard</h2><small>Next.js · SaaS</small></a>
+              <a href="./03-restaurante/"><h2>La Brasa</h2><small>HTML · Restaurante</small></a>
+              <a href="./04-gimnasio/"><h2>IronForge</h2><small>HTML · Gimnasio</small></a>
+              <a href="./05-inmobiliaria/"><h2>Altura Homes</h2><small>HTML · Bienes raíces</small></a>
+              <a href="./06-evento/"><h2>DevConf 2026</h2><small>HTML · Evento tech</small></a>
+              <a href="./07-producto-react/"><h2>Aether H1</h2><small>React · Audífonos</small></a>
+              <a href="./08-portfolio-next/"><h2>Portafolio personal</h2><small>Next.js · Portafolio</small></a>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
