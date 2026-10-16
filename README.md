@@ -16,6 +16,8 @@ Colección de landing pages y mini-proyectos para portafolio de GitHub. Cada car
 - `10-travel` — Agencia "Nomad Routes" (HTML + Tailwind CDN). Destinos, paquetes, cotizador.
 - `11-academy` — Academia "SkillStack" (HTML + Tailwind CDN). Cursos, planes, instructores.
 - `12-clinic` — Clínica "NovaClinic" (HTML + Tailwind CDN). Servicios, doctores, citas.
+- `13-java-biblioteca` — App de consola en Java (POO + estructuras de datos: ArrayList, HashMap, Queue, Stack, HashSet; Merge Sort y Binary Search).
+- `14-python-logistics` — App de consola en Python (POO + grafo y Dijkstra, BFS, Merge Sort, Binary Search, tests con unittest).
 
 ## Cómo ejecutar
 
