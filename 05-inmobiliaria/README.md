@@ -7,6 +7,8 @@ Premium real estate landing: property catalogue, services, agents and a visit-re
 
 **Landing de bienes raíces premium: catálogo de propiedades, servicios, agentes y formulario de visita con cambio ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

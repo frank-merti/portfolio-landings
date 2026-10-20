@@ -10,6 +10,8 @@ SQLite, with automated tests.
 
 **App de gestión de tareas con autenticación, datos relacionales, API REST e interfaz bilingüe (ES/EN). Next.js 14 (App Router) + Prisma + SQLite, con tests automatizados.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>SkillStack Academy — Aprende tech online</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3ES%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Cursos de programación, diseño y datos."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{violet:'#7c3aed',deep:'#4c1d95',ink:'#0f0a1f',slate:'#e2e8f0'},fontFamily:{display:['"Space Grotesk"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,11 +12,14 @@
 body{font-family:Inter,sans-serif;background:#0f0a1f;color:#e2e8f0}.font-display{font-family:'Space Grotesk',sans-serif}
 .hero{background:radial-gradient(ellipse at 70% 20%,rgba(124,58,237,.35),transparent 55%),linear-gradient(180deg,#0f0a1f,#1a1033)}
 .card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(124,58,237,.25)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body>
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-ink/70 border-b border-white/5">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-2xl text-violet">SkillStack</a>
   <div class="hidden md:flex gap-8 text-sm"><a href="#cursos" data-i18n="n_courses" class="hover:text-violet">Cursos</a><a href="#planes" data-i18n="n_plans" class="hover:text-violet">Planes</a><a href="#instructores" data-i18n="n_inst" class="hover:text-violet">Instructores</a></div>
   <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-violet/40 hover:bg-violet/10 transition">EN</button>
@@ -30,7 +34,7 @@ body{font-family:Inter,sans-serif;background:#0f0a1f;color:#e2e8f0}.font-display
    <div class="flex gap-4"><a href="#cursos" class="bg-violet px-7 py-3 rounded-full font-semibold hover:bg-violet/90 transition" data-i18n="hero_c1">Explorar cursos</a><a href="#planes" class="border border-slate-500 px-7 py-3 rounded-full hover:bg-white/5 transition" data-i18n="hero_c2">Ver planes</a></div>
    <div class="flex gap-10 mt-10"><div><p class="font-display text-3xl text-violet">60+</p><p class="text-xs text-slate-400" data-i18n="s1">Cursos</p></div><div><p class="font-display text-3xl text-violet">18k</p><p class="text-xs text-slate-400" data-i18n="s2">Estudiantes</p></div><div><p class="font-display text-3xl text-violet">4.8</p><p class="text-xs text-slate-400" data-i18n="s3">Rating</p></div></div>
   </div>
-  <div class="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-violet/20"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-violet/20"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" loading="lazy" decoding="async" alt="Estudiante aprendiendo a programar en su escritorio"></div>
  </div>
 </section>
 <section id="cursos" class="py-24 max-w-7xl mx-auto px-6">
@@ -57,10 +61,10 @@ body{font-family:Inter,sans-serif;background:#0f0a1f;color:#e2e8f0}.font-display
 <section id="instructores" class="py-24 max-w-6xl mx-auto px-6">
  <h2 class="font-display text-4xl text-center mb-10" data-i18n="inst_t">Instructores</h2>
  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-  <div><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Diego Herrera</p><p class="text-xs text-slate-400">Frontend</p></div>
-  <div><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Laura Chen</p><p class="text-xs text-slate-400">Design</p></div>
-  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Marco Silva</p><p class="text-xs text-slate-400">Backend</p></div>
-  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3"><p class="font-display">Ana Torres</p><p class="text-xs text-slate-400">Data</p></div>
+  <div><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Diego Herrera, instructor de frontend"><p class="font-display">Diego Herrera</p><p class="text-xs text-slate-400">Frontend</p></div>
+  <div><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Laura Chen, instructora de diseño"><p class="font-display">Laura Chen</p><p class="text-xs text-slate-400">Design</p></div>
+  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Marco Silva, instructor de backend"><p class="font-display">Marco Silva</p><p class="text-xs text-slate-400">Backend</p></div>
+  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover ring-2 ring-violet/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Ana Torres, instructora de datos"><p class="font-display">Ana Torres</p><p class="text-xs text-slate-400">Data</p></div>
  </div>
 </section>
 <footer class="py-8 text-center text-xs text-slate-500">© 2026 SkillStack Academy · Portfolio demo</footer>

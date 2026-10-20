@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Altura Homes — Bienes Raíces Premium</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c9a961'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EA%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Altura Homes: propiedades exclusivas en zonas prime."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{navy:'#0a1628',slate:'#13203a',mist:'#e8edf5',gold:'#c9a961'},fontFamily:{display:['"Cormorant Garamond"','serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,12 +12,15 @@
  body{font-family:Inter,sans-serif} .font-display{font-family:'Cormorant Garamond',serif}
  .hero{background:linear-gradient(180deg,rgba(10,22,40,.4),rgba(10,22,40,.85)),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
  .card-hover{transition:transform .3s ease,box-shadow .3s ease} .card-hover:hover{transform:translateY(-6px);box-shadow:0 22px 44px -12px rgba(201,169,97,.18)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body class="bg-navy text-mist antialiased">
 
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-navy/70 border-b border-white/5">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-2xl tracking-widest text-gold">ALTURA HOMES</a>
   <div class="hidden md:flex gap-8 text-sm tracking-wide">
    <a href="#props" data-i18n="n_props" class="hover:text-gold transition">Propiedades</a>
@@ -63,7 +67,7 @@
  </div>
  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Casa moderna con jardín y piscina">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$8.4M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p1_t">Casa Lomas</h3>
@@ -72,7 +76,7 @@
    </div>
   </article>
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Penthouse con vistas panorámicas">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$12.9M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p2_t">Penthouse Skyline</h3>
@@ -81,7 +85,7 @@
    </div>
   </article>
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Terreno boscoso para construir">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$6.2M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p3_t">Terreno Bosque</h3>
@@ -90,7 +94,7 @@
    </div>
   </article>
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d20166?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d20166?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Departamento en el centro de la ciudad">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$4.1M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p4_t">Depto Centro</h3>
@@ -99,7 +103,7 @@
    </div>
   </article>
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Villa con jardín, alberca y seguridad">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$15.5M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p5_t">Villa Jardín</h3>
@@ -108,7 +112,7 @@
    </div>
   </article>
   <article class="card-hover bg-slate rounded-2xl overflow-hidden border border-white/5">
-   <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover"/>
+   <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" class="h-56 w-full object-cover" loading="lazy" decoding="async" alt="Loft de doble altura con diseño industrial">
    <div class="p-5">
     <p class="text-gold font-display text-2xl mb-1">$3.3M MXN</p>
     <h3 class="font-display text-xl mb-2" data-i18n="p6_t">Loft Industrial</h3>
@@ -142,11 +146,11 @@
 <section id="agents" class="py-24 max-w-6xl mx-auto px-6 text-center">
  <h2 class="font-display text-5xl mb-10" data-i18n="ag_title">Agentes</h2>
  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-  <div><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+  <div><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Sofía Andrade, directora">
    <p class="font-display text-xl">Sofía Andrade</p><p class="text-xs text-mist/60">Directora</p></div>
-  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+  <div><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Carlos Mena, asesor senior">
    <p class="font-display text-xl">Carlos Mena</p><p class="text-xs text-mist/60">Asesor senior</p></div>
-  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3"/>
+  <div><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto object-cover ring-2 ring-gold/40 mb-3" loading="lazy" decoding="async" alt="Retrato de Marina López, especialista en inversiones">
    <p class="font-display text-xl">Marina López</p><p class="text-xs text-mist/60">Inversiones</p></div>
  </div>
 </section>

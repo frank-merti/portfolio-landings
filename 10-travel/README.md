@@ -7,6 +7,8 @@ Travel agency landing: destinations, packages and a quote request form with ES/E
 
 **Landing de agencia de viajes: destinos, paquetes y formulario de cotización con cambio ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

@@ -7,6 +7,8 @@ Landing page for a strength & conditioning gym: programs, pricing tiers, trainer
 
 **Landing para un gimnasio de fuerza y acondicionamiento: programas, planes, entrenadores y cambio de idioma ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

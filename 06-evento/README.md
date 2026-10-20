@@ -7,6 +7,8 @@ Tech conference landing: speakers, agenda by slot, ticket tiers and venue, with 
 
 **Landing de conferencia tech: speakers, agenda por horarios, tipos de boleto y sede, con cambio ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

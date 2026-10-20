@@ -7,6 +7,8 @@ Landing page for a wood-fired restaurant: menu, gallery and a working reservatio
 
 **Landing para un restaurante de fuego: menú, galería y formulario de reservas funcional, con cambio de idioma ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

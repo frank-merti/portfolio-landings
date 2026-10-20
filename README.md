@@ -14,6 +14,8 @@
 
 ---
 
+![Vista previa del sitio desplegado](docs/screenshot.png)
+
 ## Español
 
 Repositorio con **14 proyectos**: 12 landings y aplicaciones web (Next.js, React + Vite y HTML/Tailwind) y 2 aplicaciones de consola en **Java** y **Python** que demuestran POO, estructuras de datos y algoritmos.

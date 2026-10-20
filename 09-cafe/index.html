@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Origen Café — Tostadores de especialidad</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d4a373'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EO%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Café de especialidad tostado en origen. Brunch, panadería y brewing."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{espresso:'#2a1a10',roast:'#5a3825',cream:'#faf3e8',gold:'#d4a373'},fontFamily:{display:['"Playfair Display"','serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,11 +12,14 @@
 body{font-family:Inter,sans-serif;background:#faf3e8;color:#2a1a10}.font-display{font-family:'Playfair Display',serif}
 .hero{background:radial-gradient(ellipse at 80% 30%,rgba(212,163,115,.35),transparent 60%),linear-gradient(180deg,#faf3e8,#efe2cf)}
 .card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(90,56,37,.18)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body>
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-cream/80 border-b border-roast/10">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-2xl text-roast">Origen Café</a>
   <div class="hidden md:flex gap-8 text-sm"><a href="#menu" data-i18n="n_menu" class="hover:text-roast/70">Menú</a><a href="#about" data-i18n="n_about" class="hover:text-roast/70">Nosotros</a><a href="#locations" data-i18n="n_loc" class="hover:text-roast/70">Sucursales</a></div>
   <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-roast/30 hover:bg-roast/10 transition">EN</button>
@@ -29,11 +33,11 @@ body{font-family:Inter,sans-serif;background:#faf3e8;color:#2a1a10}.font-display
    <p class="text-roast/70 text-lg max-w-xl mb-8" data-i18n="hero_s">Granos de especialidad, tostado artesanal y un bar donde cada taza cuenta una historia. Brunch, panadería y brewing para ti.</p>
    <div class="flex gap-4"><a href="#menu" class="bg-roast text-cream px-7 py-3 rounded-full font-semibold hover:bg-roast/90 transition" data-i18n="hero_c1">Ver menú</a><a href="#locations" class="border border-roast/30 px-7 py-3 rounded-full hover:bg-roast/5 transition" data-i18n="hero_c2">Sucursales</a></div>
   </div>
-  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" loading="lazy" decoding="async" alt="Barista preparando café de especialidad"></div>
  </div>
 </section>
 <section id="about" class="py-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
- <div class="aspect-square rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559496419-e6af22fb398c?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+ <div class="aspect-square rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559496419-e6af22fb398c?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" loading="lazy" decoding="async" alt="Granos de café tostados junto al molino"></div>
  <div>
   <h2 class="font-display text-4xl mb-6" data-i18n="about_t">Del grano a la taza.</h2>
   <p class="text-roast/70 leading-relaxed mb-4" data-i18n="about_p">Compramos directo a productores en Veracruz, Oaxaca y Chiapas. Tostamos en lotes pequeños y servimos con técnicas de brewing: V60, aeropress, espresso.</p>
@@ -44,12 +48,12 @@ body{font-family:Inter,sans-serif;background:#faf3e8;color:#2a1a10}.font-display
  <div class="max-w-7xl mx-auto px-6">
   <div class="text-center mb-12"><h2 class="font-display text-4xl mb-3" data-i18n="menu_t">Menú destacado</h2><p class="text-roast/60" data-i18n="menu_s">Café, brunch y panadería.</p></div>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m1">Espresso doble</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m1d"> Blend de temporada.</p><p class="text-gold font-semibold">$55</p></div></article>
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m2">Latte de vainilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m2d">Leche de avena opcional.</p><p class="text-gold font-semibold">$70</p></div></article>
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1541592553191-94127a1cfe55?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m3">Avocado toast</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m3d">Pan de masa madre.</p><p class="text-gold font-semibold">$110</p></div></article>
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m4">Croissant de mantequilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m4d">Horneado cada mañana.</p><p class="text-gold font-semibold">$45</p></div></article>
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m5">Cold brew tonic</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m5d">Refrescante y cítrico.</p><p class="text-gold font-semibold">$75</p></div></article>
-   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m6">Pour over V60</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m6d">Single origin, filtrado.</p><p class="text-gold font-semibold">$65</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Espresso doble con arte latte"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m1">Espresso doble</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m1d"> Blend de temporada.</p><p class="text-gold font-semibold">$55</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Latte de vainilla con leche de avena"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m2">Latte de vainilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m2d">Leche de avena opcional.</p><p class="text-gold font-semibold">$70</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1541592553191-94127a1cfe55?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Tostada de aguacate sobre pan de masa madre"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m3">Avocado toast</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m3d">Pan de masa madre.</p><p class="text-gold font-semibold">$110</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Croissant de mantequilla recién horneado"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m4">Croissant de mantequilla</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m4d">Horneado cada mañana.</p><p class="text-gold font-semibold">$45</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Cold brew con rodajas de naranja"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m5">Cold brew tonic</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m5d">Refrescante y cítrico.</p><p class="text-gold font-semibold">$75</p></div></article>
+   <article class="card-hover bg-cream rounded-2xl overflow-hidden border border-roast/10"><img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Café de filtro V60 sobre mesa de madera"><div class="p-5"><h3 class="font-display text-xl mb-1" data-i18n="m6">Pour over V60</h3><p class="text-roast/60 text-sm mb-2" data-i18n="m6d">Single origin, filtrado.</p><p class="text-gold font-semibold">$65</p></div></article>
   </div>
  </div>
 </section>

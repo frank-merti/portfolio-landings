@@ -7,6 +7,8 @@ Online academy landing: course catalogue, subscription plans, instructors and ES
 
 **Landing de academia online: catálogo de cursos, planes de suscripción, instructores y cambio ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

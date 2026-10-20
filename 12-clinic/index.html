@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>NovaClinic — Salud & Bienestar</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d9488'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EN%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Clínica médica integral y especialidades."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{teal:'#0d9488',deep:'#115e59',paper:'#f0fdfa',ink:'#0f172a'},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,11 +12,14 @@
 body{font-family:Inter,sans-serif;background:#f0fdfa;color:#0f172a}.font-display{font-family:'Plus Jakarta Sans',sans-serif}
 .hero{background:radial-gradient(ellipse at 80% 40%,rgba(13,148,136,.18),transparent 60%),linear-gradient(180deg,#f0fdfa,#ccfbf1)}
 .card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 16px 32px -8px rgba(13,148,136,.15)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body>
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-white/70 border-b border-teal/10">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-2xl text-teal">NovaClinic</a>
   <div class="hidden md:flex gap-8 text-sm"><a href="#servicios" data-i18n="n_serv" class="hover:text-teal">Servicios</a><a href="#doctores" data-i18n="n_docs" class="hover:text-teal">Doctores</a><a href="#cita" data-i18n="n_book" class="hover:text-teal">Agendar</a></div>
   <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-teal/30 hover:bg-teal/10 transition">EN</button>
@@ -30,7 +34,7 @@ body{font-family:Inter,sans-serif;background:#f0fdfa;color:#0f172a}.font-display
    <div class="flex gap-4"><a href="#cita" class="bg-teal text-white px-7 py-3 rounded-full font-semibold hover:bg-teal/90 transition" data-i18n="hero_c1">Agendar cita</a><a href="#servicios" class="border border-slate-300 px-7 py-3 rounded-full hover:bg-slate-50 transition" data-i18n="hero_c2">Servicios</a></div>
    <div class="flex gap-10 mt-10"><div><p class="font-display text-3xl text-teal">15</p><p class="text-xs text-slate-500" data-i18n="s1">Especialidades</p></div><div><p class="font-display text-3xl text-teal">40+</p><p class="text-xs text-slate-500" data-i18n="s2">Doctores</p></div><div><p class="font-display text-3xl text-teal">98%</p><p class="text-xs text-slate-500" data-i18n="s3">Satisfacción</p></div></div>
   </div>
-  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover"></div>
+  <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" loading="lazy" decoding="async" alt="Médica atendiendo a un paciente en consulta"></div>
  </div>
 </section>
 <section id="servicios" class="py-24 max-w-7xl mx-auto px-6">
@@ -46,9 +50,9 @@ body{font-family:Inter,sans-serif;background:#f0fdfa;color:#0f172a}.font-display
  <div class="max-w-6xl mx-auto px-6">
   <h2 class="font-display text-4xl text-center mb-10" data-i18n="docs_t">Nuestros doctores</h2>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-   <div><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dra. Sofía Andrade</p><p class="text-xs text-slate-500">Medicina general</p></div>
-   <div><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dr. Carlos Mena</p><p class="text-xs text-slate-500">Cardiología</p></div>
-   <div><img src="https://images.unsplash.com/photo-1594824476977-81569592859b?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3"><p class="font-display">Dra. Marina López</p><p class="text-xs text-slate-500">Nutrición</p></div>
+   <div><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3" loading="lazy" decoding="async" alt="Retrato de la Dra. Sofía Andrade, medicina general"><p class="font-display">Dra. Sofía Andrade</p><p class="text-xs text-slate-500">Medicina general</p></div>
+   <div><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3" loading="lazy" decoding="async" alt="Retrato del Dr. Carlos Mena, cardiología"><p class="font-display">Dr. Carlos Mena</p><p class="text-xs text-slate-500">Cardiología</p></div>
+   <div><img src="https://images.unsplash.com/photo-1594824476977-81569592859b?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-teal/20 mb-3" loading="lazy" decoding="async" alt="Retrato de la Dra. Marina López, nutrición"><p class="font-display">Dra. Marina López</p><p class="text-xs text-slate-500">Nutrición</p></div>
   </div>
  </div>
 </section>

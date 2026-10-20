@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>DevConf 2026 — Conferencia de Desarrollo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322d3ee'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3ED%3C/text%3E%3C/svg%3E">
 <meta name="description" content="DevConf 2026: la conferencia tech del año."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{void:'#050814',nebula:'#0f172a',cyan:'#22d3ee',violet:'#8b5cf6',star:'#f8fafc'},fontFamily:{display:['"Space Grotesk"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,12 +12,15 @@
  body{font-family:Inter,sans-serif} .font-display{font-family:'Space Grotesk',sans-serif}
  .hero{background:radial-gradient(ellipse at 50% 30%,rgba(139,92,246,.35),transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(34,211,238,.25),transparent 50%),linear-gradient(180deg,#050814,#0f172a)}
  .glow{box-shadow:0 0 40px -10px rgba(34,211,238,.4)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body class="bg-void text-star antialiased">
 
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-void/70 border-b border-white/5">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-xl tracking-widest">DEVCONF <span class="text-cyan">2026</span></a>
   <div class="hidden md:flex gap-8 text-sm">
    <a href="#speakers" data-i18n="n_sp" class="hover:text-cyan transition">Speakers</a>
@@ -53,19 +57,19 @@
  <h2 class="font-display text-4xl mb-10 text-center" data-i18n="sp_title">Speakers</h2>
  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
   <div class="bg-nebula/60 rounded-2xl p-5 border border-white/5 text-center">
-   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40"/>
+   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40" loading="lazy" decoding="async" alt="Retrato de Diego Herrera, ponente de IA">
    <p class="font-display">Diego Herrera</p><p class="text-xs text-star/60">Ex-Google · IA aplicada</p>
   </div>
   <div class="bg-nebula/60 rounded-2xl p-5 border border-white/5 text-center">
-   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40"/>
+   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40" loading="lazy" decoding="async" alt="Retrato de Laura Chen, ponente de frontend">
    <p class="font-display">Laura Chen</p><p class="text-xs text-star/60">Vercel · Frontend</p>
   </div>
   <div class="bg-nebula/60 rounded-2xl p-5 border border-white/5 text-center">
-   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40"/>
+   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40" loading="lazy" decoding="async" alt="Retrato de Marco Silva, ponente de plataforma">
    <p class="font-display">Marco Silva</p><p class="text-xs text-star/60">Stripe · Platform</p>
   </div>
   <div class="bg-nebula/60 rounded-2xl p-5 border border-white/5 text-center">
-   <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40"/>
+   <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto object-cover mb-3 ring-2 ring-cyan/40" loading="lazy" decoding="async" alt="Retrato de Ana Torres, ponente de datos e IA">
    <p class="font-display">Ana Torres</p><p class="text-xs text-star/60">OpenAI · LLMs</p>
   </div>
  </div>

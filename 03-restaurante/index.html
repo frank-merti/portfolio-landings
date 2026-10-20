@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Brasa — Restaurante de fuego & sabores</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff4d8d'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EL%3C/text%3E%3C/svg%3E">
   <meta name="description" content="La Brasa: restaurante de carnes y sabores al fuego. Reserva tu mesa." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,13 +22,16 @@
     .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -10px rgba(226,88,34,.25); }
     .nav-blur { backdrop-filter: blur(10px); background: rgba(26,18,11,.75); }
     [data-i18n] { transition: opacity .2s; }
-  </style>
+      @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+</style>
 </head>
 <body class="bg-coal text-cream antialiased">
 
   <!-- Navbar -->
   <header class="fixed top-0 w-full z-50 nav-blur border-b border-white/5">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       <a href="#" class="font-display text-2xl text-gold tracking-wide">La Brasa</a>
       <div class="hidden md:flex gap-8 text-sm">
         <a href="#about" data-i18n="nav_about" class="hover:text-ember transition">Nosotros</a>
@@ -56,7 +60,7 @@
       </div>
       <div class="relative">
         <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Plato" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Plato" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
         <div class="absolute -bottom-6 -left-6 bg-coal/90 backdrop-blur px-6 py-4 rounded-2xl border border-gold/30">
           <p class="text-xs text-cream/60" data-i18n="hero_badge_l">Calificación</p>
@@ -69,8 +73,8 @@
   <!-- About -->
   <section id="about" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
     <div class="grid grid-cols-2 gap-4">
-      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full mt-8" alt="">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full" alt="Interior del restaurante con luz cálida" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80" class="rounded-2xl object-cover h-60 w-full mt-8" alt="Plato de temporada servido en mesa" loading="lazy" decoding="async">
     </div>
     <div>
       <h2 class="font-display text-4xl mb-6" data-i18n="about_title">Una cocina que respeta el origen.</h2>
@@ -93,7 +97,7 @@
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1544025162-d766942673bf?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1544025162-d766942673bf?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Tomahawk de res madurado a la parrilla" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m1_t">Tomahawk 1.2 kg</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m1_d">Madurado 45 días, chimichurri de la casa.</p>
@@ -101,7 +105,7 @@
           </div>
         </article>
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Pizza recién horneada con ingredientes artesanales" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m2_t">Burrata ahumada</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m2_d">Tomate criollo, pesto de nuez y aceite de oliva.</p>
@@ -109,7 +113,7 @@
           </div>
         </article>
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Ensalada fresca de temporada" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m3_t">Ensalada de temporada</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m3_d">Hortalizas del mercado, queso de cabra, miel.</p>
@@ -117,7 +121,7 @@
           </div>
         </article>
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Parrillada de carnes con guarniciones" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m4_t">Costilla BBQ</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m4_d">6 horas de fuego lento, salsa de tamarindo.</p>
@@ -125,7 +129,7 @@
           </div>
         </article>
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Postre de vainilla con caramelo oscuro" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m5_t">Flan de vainilla</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m5_d">Caramelo oscuro, crema y flor de sal.</p>
@@ -133,7 +137,7 @@
           </div>
         </article>
         <article class="card-hover bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-          <img src="https://images.unsplash.com/photo-1514362543477-311a55294a27?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="">
+          <img src="https://images.unsplash.com/photo-1514362543477-311a55294a27?auto=format&fit=crop&w=700&q=80" class="h-48 w-full object-cover" alt="Cóctel de mezcal con chile ancho" loading="lazy" decoding="async">
           <div class="p-5">
             <h3 class="font-display text-xl mb-1" data-i18n="m6_t">Cóctel Brasa</h3>
             <p class="text-cream/60 text-sm mb-3" data-i18n="m6_d">Mezcal, limón y chile ancho ahumado.</p>
@@ -148,12 +152,12 @@
   <section id="gallery" class="py-24 max-w-7xl mx-auto px-6">
     <h2 class="font-display text-4xl mb-8 text-center" data-i18n="gal_title">Galería</h2>
     <div class="columns-2 md:columns-3 gap-4 space-y-4">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Salón principal del restaurante" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Barra de cócteles con iluminación cálida" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Mesa servida en la terraza" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Cocina abierta durante el servicio" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Sala con mesas de madera y luz natural" loading="lazy" decoding="async">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" class="rounded-xl w-full" alt="Cocina preparando un plato para el servicio" loading="lazy" decoding="async">
     </div>
   </section>
 

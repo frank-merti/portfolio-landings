@@ -8,6 +8,8 @@ Digital agency landing built with Next.js 14 (App Router), TypeScript and Tailwi
 
 **Landing de agencia digital con Next.js 14 (App Router), TypeScript y Tailwind, con cambio de idioma ES/EN y export estático para GitHub Pages.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

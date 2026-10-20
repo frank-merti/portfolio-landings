@@ -8,6 +8,8 @@ Product marketing landing for a project management SaaS: features, pricing tiers
 
 **Landing de producto para un SaaS de gestión de proyectos: features, planes, testimonios y FAQ, con cambio ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

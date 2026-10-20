@@ -7,6 +7,8 @@ Medical clinic landing: services, doctor profiles, appointment booking and ES/EN
 
 **Landing de clínica médica: servicios, doctores, agenda de citas y cambio de idioma ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

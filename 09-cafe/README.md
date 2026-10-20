@@ -7,6 +7,8 @@ Specialty coffee roaster landing: menu, origins, locations and ES/EN language sw
 
 **Landing de tostadores de café de especialidad: menú, orígenes, sucursales y cambio de idioma ES/EN.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

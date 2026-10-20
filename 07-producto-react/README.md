@@ -8,6 +8,8 @@ Product launch page for premium headphones: specs, colour picker, cart state and
 
 **Landing de lanzamiento de audífonos premium: specs, selector de color, estado de carrito y cambio ES/EN, con React 18 + Vite + Tailwind.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>IronForge — Gimnasio & Entrenamiento</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c6ff00'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EI%3C/text%3E%3C/svg%3E">
 <meta name="description" content="IronForge: transforma tu físico con programas de fuerza, HIIT y coaching personal."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{neon:'#c6ff00',steel:'#0b0e13',carbon:'#141922',ash:'#b0b8c4'},fontFamily:{display:['"Bebas Neue"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
@@ -12,12 +13,15 @@
  .hero{background:radial-gradient(ellipse at 30% 50%,rgba(198,255,0,.18),transparent 55%),linear-gradient(135deg,#0b0e13 0%,#141922 100%)}
  .grid-lines{background-image:linear-gradient(rgba(198,255,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(198,255,0,.06) 1px,transparent 1px);background-size:60px 60px}
  .card-hover{transition:transform .25s ease,box-shadow .25s ease} .card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -8px rgba(198,255,0,.2)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body class="bg-steel text-ash antialiased">
 
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-steel/80 border-b border-white/5">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-3xl text-neon tracking-widest">IRONFORGE</a>
   <div class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
    <a href="#programs" data-i18n="n_prog" class="hover:text-neon transition">Programas</a>
@@ -50,7 +54,7 @@
   </div>
   <div class="relative">
    <div class="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-white/10">
-    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover">
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover" loading="lazy" decoding="async" alt="Sala de pesas con equipo de cardio">
    </div>
   </div>
  </div>
@@ -125,19 +129,19 @@
  <h2 class="font-display text-5xl mb-10 text-center" data-i18n="tr_title">Entrenadores</h2>
  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
   <div class="text-center">
-   <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4"/>
+   <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4" loading="lazy" decoding="async" alt="Entrenador de fuerza guiando una sesión">
    <p class="font-display text-xl">Marco Vela</p><p class="text-xs text-ash/60 uppercase tracking-widest" data-i18n="tr1">Fuerza</p>
   </div>
   <div class="text-center">
-   <img src="https://images.unsplash.com/photo-1609899517237-6594f1d8b1d2?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4"/>
+   <img src="https://images.unsplash.com/photo-1609899517237-6594f1d8b1d2?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4" loading="lazy" decoding="async" alt="Entrenadora de HIIT durante la clase">
    <p class="font-display text-xl">Ana Ríos</p><p class="text-xs text-ash/60 uppercase tracking-widest" data-i18n="tr2">HIIT & Boxeo</p>
   </div>
   <div class="text-center">
-   <img src="https://images.unsplash.com/photo-1518611012118-6762a0383344?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4"/>
+   <img src="https://images.unsplash.com/photo-1518611012118-6762a0383344?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4" loading="lazy" decoding="async" alt="Entrenador de movilidad y movilidad articular">
    <p class="font-display text-xl">Diego Cruz</p><p class="text-xs text-ash/60 uppercase tracking-widest" data-i18n="tr3">Movilidad</p>
   </div>
   <div class="text-center">
-   <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4"/>
+   <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-neon/30 mb-4" loading="lazy" decoding="async" alt="Especialista en nutrición durante la consulta">
    <p class="font-display text-xl">Lucía Mora</p><p class="text-xs text-ash/60 uppercase tracking-widest" data-i18n="tr4">Nutrición</p>
   </div>
  </div>

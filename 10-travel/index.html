@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Nomad Routes — Agencia de viajes</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230ea5e9'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%230b0f1a'%3EN%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Viajes personalizados a destinos únicos."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ocean:'#0ea5e9',deep:'#0c4a6e',sand:'#fef3c7',ink:'#0f172a'},fontFamily:{display:['"Poppins"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
@@ -11,11 +12,14 @@
 body{font-family:Inter,sans-serif;background:#f8fafc;color:#0f172a}.font-display{font-family:'Poppins',sans-serif}
 .hero{background:radial-gradient(ellipse at 20% 60%,rgba(14,165,233,.25),transparent 55%),linear-gradient(180deg,#e0f2fe,#f8fafc)}
 .card-hover{transition:transform .3s ease,box-shadow .3s ease}.card-hover:hover{transform:translateY(-5px);box-shadow:0 18px 36px -10px rgba(14,165,233,.18)}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
 </style>
 </head>
 <body>
 <header class="fixed top-0 w-full z-50 backdrop-blur bg-white/70 border-b border-slate-200">
- <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+ <nav aria-label="Main navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
   <a class="font-display text-2xl text-ocean">Nomad Routes</a>
   <div class="hidden md:flex gap-8 text-sm"><a href="#destinos" data-i18n="n_dest" class="hover:text-ocean">Destinos</a><a href="#paquetes" data-i18n="n_pkg" class="hover:text-ocean">Paquetes</a><a href="#contacto" data-i18n="n_ct" class="hover:text-ocean">Contacto</a></div>
   <button id="langBtn" class="text-xs px-3 py-1.5 rounded-full border border-ocean/40 hover:bg-ocean/10 transition">EN</button>
@@ -41,10 +45,10 @@ body{font-family:Inter,sans-serif;background:#f8fafc;color:#0f172a}.font-display
 <section id="destinos" class="py-24 max-w-7xl mx-auto px-6">
  <h2 class="font-display text-4xl text-center mb-10" data-i18n="dest_t">Destinos destacados</h2>
  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d1">Bali</h3><p class="text-slate-500 text-sm" data-i18n="d1d">Playas y templos.</p><p class="text-ocean font-semibold mt-2">Desde $1,299</p></div></article>
-  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d2">Japón</h3><p class="text-slate-500 text-sm" data-i18n="d2d">Tokio y Kioto.</p><p class="text-ocean font-semibold mt-2">Desde $1,899</p></div></article>
-  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d3">Perú</h3><p class="text-slate-500 text-sm" data-i18n="d3d">Cuzco y Machu Picchu.</p><p class="text-ocean font-semibold mt-2">Desde $999</p></div></article>
-  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d4">Islandia</h3><p class="text-slate-500 text-sm" data-i18n="d4d">Auroras boreales.</p><p class="text-ocean font-semibold mt-2">Desde $1,599</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Arrozales de Bali al atardecer"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d1">Bali</h3><p class="text-slate-500 text-sm" data-i18n="d1d">Playas y templos.</p><p class="text-ocean font-semibold mt-2">Desde $1,299</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Torre de Kioto al amanecer"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d2">Japón</h3><p class="text-slate-500 text-sm" data-i18n="d2d">Tokio y Kioto.</p><p class="text-ocean font-semibold mt-2">Desde $1,899</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Machu Picchu entre las nubes"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d3">Perú</h3><p class="text-slate-500 text-sm" data-i18n="d3d">Cuzco y Machu Picchu.</p><p class="text-ocean font-semibold mt-2">Desde $999</p></div></article>
+  <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=700&q=80" class="h-44 w-full object-cover" loading="lazy" decoding="async" alt="Aurora boreal sobre un paisaje helado"><div class="p-5"><h3 class="font-display text-xl" data-i18n="d4">Islandia</h3><p class="text-slate-500 text-sm" data-i18n="d4d">Auroras boreales.</p><p class="text-ocean font-semibold mt-2">Desde $1,599</p></div></article>
  </div>
 </section>
 <section id="paquetes" class="py-24 bg-slate-50">

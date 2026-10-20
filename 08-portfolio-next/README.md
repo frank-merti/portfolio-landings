@@ -8,6 +8,8 @@ Personal developer portfolio built with Next.js 14 (App Router), TypeScript and 
 
 **Portafolio personal con Next.js 14 (App Router), TypeScript y Tailwind: perfil, skills, catálogo de proyectos, experiencia, blog y contacto.**
 
+![Vista previa del proyecto](docs/screenshot.png)
+
 ---
 
 ## ES
