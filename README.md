@@ -43,6 +43,7 @@ Repositorio con **14 proyectos**: 12 landings y aplicaciones web (Next.js, React
 |---|---|---|---|
 | 13 | Library CLI | Java 11+ | POO, `ArrayList`, `HashMap`, `Queue`, `Deque`, `HashSet`, Merge Sort, búsqueda binaria |
 | 14 | Logistics CLI | Python 3.10+ | POO, grafo, Dijkstra, BFS, Merge Sort, búsqueda binaria, `heapq`, `unittest` |
+| 15 | Taskboard | Next.js 14, Prisma, SQLite, Zod | API REST, autenticación con scrypt, sesiones, i18n ES/EN, 21 tests |
 
 ### Qué demuestra este repositorio
 
@@ -71,6 +72,9 @@ cd 13-java-biblioteca && javac -d out -encoding UTF-8 src/*.java && java -cp out
 
 # Python (14)
 cd 14-python-logistics && python main.py
+
+# Full-stack (15)
+cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
 ```
 
 ### Estructura
@@ -91,6 +95,7 @@ portfolio-landings/
 ├── 12-clinic/           # HTML + Tailwind
 ├── 13-java-biblioteca/  # Java (POO + DSA)
 ├── 14-python-logistics/ # Python (POO + DSA)
+├── 15-taskboard-fullstack/ # Next.js + Prisma (API, auth, DB, tests)
 ├── .github/workflows/   # CI + deploy a GitHub Pages
 ├── index.html           # Índice del sitio desplegado
 └── LICENSE              # MIT
@@ -142,6 +147,7 @@ A repository with **14 projects**: 12 landing pages and web applications (Next.j
 |---|---|---|---|
 | 13 | Library CLI | Java 11+ | OOP, `ArrayList`, `HashMap`, `Queue`, `Deque`, `HashSet`, Merge Sort, binary search |
 | 14 | Logistics CLI | Python 3.10+ | OOP, graph, Dijkstra, BFS, Merge Sort, binary search, `heapq`, `unittest` |
+| 15 | Taskboard | Next.js 14, Prisma, SQLite, Zod | REST API, scrypt auth, sessions, ES/EN i18n, 21 tests |
 
 ### What this repository demonstrates
 
@@ -170,6 +176,9 @@ cd 13-java-biblioteca && javac -d out -encoding UTF-8 src/*.java && java -cp out
 
 # Python (14)
 cd 14-python-logistics && python main.py
+
+# Full-stack (15)
+cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
 ```
 
 ### Tech stack

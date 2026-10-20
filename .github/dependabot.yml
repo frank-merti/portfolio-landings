@@ -16,6 +16,10 @@ updates:
     directory: /08-portfolio-next
     schedule:
       interval: monthly
+  - package-ecosystem: npm
+    directory: /15-taskboard-fullstack
+    schedule:
+      interval: monthly
   - package-ecosystem: pip
     directory: /14-python-logistics
     schedule:

@@ -103,3 +103,35 @@ jobs:
       - name: Self test
         run: java -cp out SelfTest
         working-directory: 13-java-biblioteca
+
+  fullstack:
+    name: Full-Stack (15-taskboard-fullstack)
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: 'file:./dev.db'
+      SESSION_SECRET: 'ci-secret'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: 15-taskboard-fullstack/package-lock.json
+      - name: Install
+        run: npm ci
+        working-directory: 15-taskboard-fullstack
+      - name: Push database schema
+        run: npx prisma db push --skip-generate
+        working-directory: 15-taskboard-fullstack
+      - name: Lint
+        run: npm run lint
+        working-directory: 15-taskboard-fullstack
+      - name: Typecheck
+        run: npm run typecheck
+        working-directory: 15-taskboard-fullstack
+      - name: Test
+        run: npm test
+        working-directory: 15-taskboard-fullstack
+      - name: Build
+        run: npm run build
+        working-directory: 15-taskboard-fullstack

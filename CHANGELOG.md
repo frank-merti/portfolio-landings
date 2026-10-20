@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- `15-taskboard-fullstack` — Next.js 14 + Prisma + SQLite + auth + Vitest (in progress)
+- `15-taskboard-fullstack` — full-stack kanban app: REST API, scrypt authentication, database sessions, bilingual UI and 21 unit tests
 
 ### Changed
 - Portfolio moved to a single monorepo with one release and one Pages deployment

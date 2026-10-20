@@ -79,6 +79,7 @@ export const projects: Project[] = [
   { title: 'Nomad Routes', description: 'Agencia de viajes: destinos, paquetes, cotizador.', technologies: ['HTML', 'Tailwind CDN'], gradient: 'from-sky-500 to-cyan-500', href: '../10-travel' },
   { title: 'SkillStack Academy', description: 'Plataforma educativa tech: cursos, planes, instructores.', technologies: ['HTML', 'Tailwind CDN'], gradient: 'from-violet-600 to-purple-700', href: '../11-academy' },
   { title: 'NovaClinic', description: 'Clínica médica integral: servicios, doctores, citas.', technologies: ['HTML', 'Tailwind CDN'], gradient: 'from-teal-500 to-emerald-600', href: '../12-clinic' },
+  { title: 'Taskboard', description: 'Kanban full-stack: API REST, auth con scrypt, sesiones en base de datos, Prisma + SQLite y 21 tests.', technologies: ['Next.js', 'Prisma', 'SQLite', 'Zod'], gradient: 'from-indigo-500 to-blue-700', href: '../15-taskboard-fullstack' },
   { title: 'Library CLI', description: 'Consola en Java: POO, Merge Sort, búsqueda binaria, Queue y pila LIFO.', technologies: ['Java', 'CLI'], gradient: 'from-orange-500 to-red-600', href: '../13-java-biblioteca' },
   { title: 'Logistics CLI', description: 'Consola en Python: grafo, Dijkstra, BFS, Merge Sort y cola de prioridad.', technologies: ['Python', 'CLI'], gradient: 'from-sky-600 to-blue-700', href: '../14-python-logistics' }
 ];
