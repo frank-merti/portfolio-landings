@@ -1,112 +1,103 @@
-"""Interfaz de usuario por consola (menú) de la app de logística.
-
-Este módulo solo interactúa con el usuario y delega toda la lógica al
-``LogisticsManager``. Separar UI y lógica facilita probarlas por separado.
-"""
+"""Console UI for the logistics application."""
 from __future__ import annotations
-
-from manager import LogisticsManager
 from entities import Shipment
+from i18n import t, toggle_language
+from manager import LogisticsManager
 
 
 def seed(manager: LogisticsManager) -> None:
-    """Carga datos de ejemplo: hubs, rutas, inventario y envíos."""
     for hub in ["CDMX", "Puebla", "Toluca", "Querétaro", "Guadalajara"]:
         manager.add_hub(hub)
 
-    # Rutas del grafo (origen, destino, kilómetros)
     manager.add_route("CDMX", "Puebla", 130)
     manager.add_route("CDMX", "Toluca", 65)
     manager.add_route("Toluca", "Querétaro", 150)
     manager.add_route("Puebla", "Querétaro", 190)
     manager.add_route("Querétaro", "Guadalajara", 280)
 
-    # Inventario inicial
     manager.add_stock("Laptop", 10)
     manager.add_stock("Mouse", 50)
 
-    # Envíos iniciales con distintas prioridades
     manager.register_shipment(Shipment("S001", "Ana", "Guadalajara", 3))
     manager.register_shipment(Shipment("S002", "Carlos", "Puebla", 5))
     manager.register_shipment(Shipment("S003", "Marina", "Toluca", 1))
 
 
 def print_menu() -> None:
-    """Imprime las opciones disponibles."""
-    print("=== Logística (Python + Data Structures) ===")
-    print("1. Ver inventario")
-    print("2. Agregar stock")
-    print("3. Ruta más corta entre hubs (Dijkstra)")
-    print("4. Hubs alcanzables (BFS)")
-    print("5. Registrar envío (Shipment)")
-    print("6. Procesar próximo envío (Priority Queue)")
-    print("7. Listar envíos ordenados por prioridad (Merge Sort)")
-    print("8. Buscar envío por ID (Binary Search)")
-    print("9. Salir")
+    print(t("app.title"))
+    print(t("menu.inventory"))
+    print(t("menu.add_stock"))
+    print(t("menu.route"))
+    print(t("menu.reachable"))
+    print(t("menu.add_shipment"))
+    print(t("menu.next_shipment"))
+    print(t("menu.list_shipments"))
+    print(t("menu.find_shipment"))
+    print(t("menu.language"))
+    print(t("menu.exit"))
 
 
 def main() -> None:
-    """Bucle principal del menú."""
     manager = LogisticsManager()
     seed(manager)
 
     while True:
         print_menu()
-        option = input("Opción: ").strip()
+        option = input(t("prompt.option") + ": ").strip()
 
         if option == "1":
-            # Muestra el diccionario de inventario
             print(manager.inventory)
 
         elif option == "2":
-            product = input("Producto: ")
-            qty = int(input("Cantidad: "))
-            manager.add_stock(product, qty)
-            print("Stock actualizado.")
+            product = input(t("prompt.product") + ": ")
+            quantity = int(input(t("prompt.quantity") + ": "))
+            manager.add_stock(product, quantity)
+            print(t("msg.stock_updated"))
 
         elif option == "3":
-            # Dijkstra: ruta más corta entre dos hubs
-            start = input("Origen: ")
-            end = input("Destino: ")
-            km, path = manager.shortest_route(start, end)
-            print(f"Distancia: {km} km | Ruta: {' -> '.join(path) if path else 'sin ruta'}")
+            origin = input(t("prompt.origin") + ": ")
+            destination = input(t("prompt.destination") + ": ")
+            km, route = manager.shortest_route(origin, destination)
+            if route:
+                print(t("msg.route", km=km, route=" -> ".join(route)))
+            else:
+                print(t("msg.no_route"))
 
         elif option == "4":
-            # BFS: hubs que se pueden alcanzar desde el origen
-            start = input("Hub inicial: ")
-            print(manager.reachable_hubs(start))
+            hub = input(t("prompt.hub") + ": ")
+            print(manager.reachable_hubs(hub))
 
         elif option == "5":
-            # Alta de envíos (se encolan por prioridad)
-            sid = input("ID envío: ")
-            cust = input("Cliente: ")
-            dest = input("Destino: ")
-            prio = int(input("Prioridad: "))
-            manager.register_shipment(Shipment(sid, cust, dest, prio))
-            print("Envío registrado.")
+            shipment_id = input(t("prompt.shipment_id") + ": ")
+            customer = input(t("prompt.customer") + ": ")
+            destination = input(t("prompt.destination") + ": ")
+            priority = int(input(t("prompt.priority") + ": "))
+            manager.register_shipment(Shipment(shipment_id, customer, destination, priority))
+            print(t("msg.shipment_registered"))
 
         elif option == "6":
-            # Se saca de la cola de prioridad el envío más urgente
             shipment = manager.next_shipment()
-            print(shipment if shipment else "Sin envíos pendientes.")
+            print(shipment if shipment else t("msg.no_shipments"))
 
         elif option == "7":
-            # Merge Sort por prioridad descendente
-            for s in manager.sorted_shipments(key=lambda s: -s.priority):
-                print(s)
+            for shipment in manager.sorted_shipments(key=lambda item: -item.priority):
+                print(shipment)
 
         elif option == "8":
-            # Binary Search sobre una copia ordenada por id
-            sid = input("ID envío: ")
-            found = manager.find_shipment(sid)
-            print(found if found else "No encontrado.")
+            shipment_id = input(t("prompt.shipment_id") + ": ")
+            found = manager.find_shipment(shipment_id)
+            print(found if found else t("msg.not_found"))
 
         elif option == "9":
-            print("Hasta pronto.")
+            toggle_language()
+            print(t("msg.language_changed"))
+
+        elif option == "10":
+            print(t("msg.goodbye"))
             break
 
         else:
-            print("Opción no válida.")
+            print(t("msg.invalid_option"))
 
 
 if __name__ == "__main__":
