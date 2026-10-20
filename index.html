@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portfolio Landings · Francisco Merti</title>
+<meta name="description" content="14 proyectos: landings y aplicaciones web en Next.js, React y Tailwind, más apps de consola en Java y Python con POO, estructuras de datos y algoritmos."/>
+<link rel="canonical" href="https://frank-merti.github.io/portfolio-landings/"/>
+<style>
+  :root{--bg:#0a0e1a;--panel:#111829;--border:rgba(255,255,255,.08);--text:#e8ecf5;--muted:#93a0bd;--accent:#6366f1;--accent2:#22d3ee}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header{padding:72px 0 40px;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at 50% 0%,rgba(99,102,241,.25),transparent 60%)}
+  h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 12px}
+  h2{font-size:1.5rem;margin:56px 0 20px}
+  p.lead{color:var(--muted);max-width:760px;margin:0}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .badge{font-size:.78rem;padding:5px 11px;border:1px solid var(--border);border-radius:999px;color:var(--muted)}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+  a.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:inherit;display:block;transition:transform .2s ease,border-color .2s ease}
+  a.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  a.card strong{display:block;font-size:1.05rem;margin-bottom:6px}
+  a.card span{color:var(--muted);font-size:.88rem}
+  .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:.72rem;padding:3px 8px;border-radius:6px;background:rgba(34,211,238,.1);color:var(--accent2)}
+  .langs{color:var(--muted);font-size:.9rem;margin-top:8px}
+  footer{border-top:1px solid var(--border);margin-top:64px;padding:28px 0;color:var(--muted);font-size:.85rem}
+  a{color:var(--accent2)}
+  code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px;font-size:.85em}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Portfolio Landings</h1>
+    <p class="lead">Colección de landings y aplicaciones web con Next.js, React, Vite y Tailwind, más dos aplicaciones de consola en Java y Python que aplican POO, estructuras de datos y algoritmos.</p>
+    <div class="badges">
+      <span class="badge">Next.js 14</span>
+      <span class="badge">React 18</span>
+      <span class="badge">TypeScript</span>
+      <span class="badge">Tailwind CSS</span>
+      <span class="badge">Java</span>
+      <span class="badge">Python</span>
+      <span class="badge">ES / EN</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Web · Next.js &amp; React</h2>
+  <div class="grid">
+    <a class="card" href="./01-agency-next/"><strong>Nebula Studio</strong><span>Agencia digital</span><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span></div></a>
+    <a class="card" href="./02-saas-next/"><strong>Flowboard</strong><span>SaaS de gestión de proyectos</span><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span></div></a>
+    <a class="card" href="./07-producto-react/"><strong>Aether H1</strong><span>Lanzamiento de producto</span><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span></div></a>
+    <a class="card" href="./08-portfolio-next/"><strong>Developer Portfolio</strong><span>Portafolio personal</span><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span></div></a>
+  </div>
+
+  <h2>Web · HTML + Tailwind</h2>
+  <div class="grid">
+    <a class="card" href="./03-restaurante/"><strong>La Brasa</strong><span>Restaurante</span></a>
+    <a class="card" href="./04-gimnasio/"><strong>IronForge</strong><span>Gimnasio</span></a>
+    <a class="card" href="./05-inmobiliaria/"><strong>Altura Homes</strong><span>Bienes raíces</span></a>
+    <a class="card" href="./06-evento/"><strong>DevConf 2026</strong><span>Conferencia tech</span></a>
+    <a class="card" href="./09-cafe/"><strong>Origen Café</strong><span>Cafetería de especialidad</span></a>
+    <a class="card" href="./10-travel/"><strong>Nomad Routes</strong><span>Agencia de viajes</span></a>
+    <a class="card" href="./11-academy/"><strong>SkillStack Academy</strong><span>Plataforma educativa</span></a>
+    <a class="card" href="./12-clinic/"><strong>NovaClinic</strong><span>Clínica médica</span></a>
+  </div>
+
+  <h2>Consola · Java &amp; Python</h2>
+  <div class="grid">
+    <a class="card" href="./13-java-biblioteca/"><strong>Library CLI</strong><span>Java · POO, Merge Sort, búsqueda binaria, Queue, Deque</span><div class="tags"><span class="tag">Java</span></div></a>
+    <a class="card" href="./14-python-logistics/"><strong>Logistics CLI</strong><span>Python · Dijkstra, BFS, Merge Sort, búsqueda binaria, heapq</span><div class="tags"><span class="tag">Python</span></div></a>
+  </div>
+
+  <h2>Ejecutar en local</h2>
+  <p class="langs">
+    <code>cd 01-agency-next &amp;&amp; npm install &amp;&amp; npm run dev</code> ·
+    <code>cd 07-producto-react &amp;&amp; npm install &amp;&amp; npm run dev</code> ·
+    <code>cd 14-python-logistics &amp;&amp; python main.py</code> ·
+    <code>cd 13-java-biblioteca &amp;&amp; javac -d out src/*.java &amp;&amp; java -cp out Main</code>
+  </p>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Francisco Merti · MIT License · <a href="https://github.com/frank-merti/portfolio-landings">Código en GitHub</a></div>
+</footer>
+</body>
+</html>

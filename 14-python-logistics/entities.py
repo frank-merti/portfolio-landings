@@ -10,7 +10,7 @@ class Shipment:
     destination: str
     priority: int
 
-    def __lt__(self, other: "Shipment") -> bool:
+    def __lt__(self, other: Shipment) -> bool:
         return self.priority > other.priority
 
 

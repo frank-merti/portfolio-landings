@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frank-merti.github.io/portfolio-landings/sitemap.xml

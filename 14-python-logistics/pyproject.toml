@@ -1,0 +1,27 @@
+[project]
+name = "logistics-cli"
+version = "1.0.0"
+description = "Console app for hub routing, inventory and shipments built on classic data structures and algorithms."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Francisco Merti" }]
+keywords = ["algorithms", "dijkstra", "bfs", "merge-sort", "binary-search", "oop"]
+dependencies = []
+
+[project.scripts]
+logistics = "cli:main"
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5.0"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]

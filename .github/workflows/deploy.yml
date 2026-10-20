@@ -72,61 +72,27 @@ jobs:
           set -e
           rm -rf _site
           mkdir -p _site
-          cp -a 03-restaurante _site/
-          cp -a 04-gimnasio _site/
-          cp -a 05-inmobiliaria _site/
-          cp -a 06-evento _site/
-          cp -a 09-cafe _site/
-          cp -a 10-travel _site/
-          cp -a 11-academy _site/
-          cp -a 12-clinic _site/
-          mkdir -p _site/01-agency-next
+
+          # Static landing pages (plain HTML + Tailwind CDN)
+          for project in 03-restaurante 04-gimnasio 05-inmobiliaria 06-evento 09-cafe 10-travel 11-academy 12-clinic; do
+            cp -a "$project" _site/
+          done
+
+          # Framework projects (compiled output)
+          mkdir -p _site/01-agency-next _site/02-saas-next _site/07-producto-react _site/08-portfolio-next
           cp -a 01-agency-next/out/. _site/01-agency-next/
-          mkdir -p _site/02-saas-next
           cp -a 02-saas-next/out/. _site/02-saas-next/
-          mkdir -p _site/07-producto-react
           cp -a 07-producto-react/dist/. _site/07-producto-react/
-          mkdir -p _site/08-portfolio-next
           cp -a 08-portfolio-next/out/. _site/08-portfolio-next/
-          # landing index at root listing all projects
-          cat > _site/index.html <<'EOF'
-          <!DOCTYPE html>
-          <html lang="es">
-          <head>
-            <meta charset="UTF-8"/>
-            <meta name="viewport" content="width=device-width,initial-scale=1"/>
-            <title>Portfolio de Landings</title>
-            <style>
-              body{font-family:system-ui,sans-serif;background:#0b0f1a;color:#f5f7fa;margin:0;padding:40px 20px}
-              h1{text-align:center;margin-bottom:8px}
-              p{text-align:center;opacity:.7;margin-bottom:32px}
-              .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:1100px;margin:0 auto}
-              a{display:block;background:#11162a;padding:20px;border-radius:12px;color:#f5f7fa;text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:.2s}
-              a:hover{border-color:#6366f1;transform:translateY(-2px)}
-              h2{margin:0 0 6px;font-size:1.1rem}
-              small{opacity:.6}
-            </style>
-          </head>
-          <body>
-            <h1>Portfolio de Landings</h1>
-            <p>Selecciona un proyecto para verlo en vivo.</p>
-            <div class="grid">
-              <a href="./01-agency-next/"><h2>Nebula Studio</h2><small>Next.js · Agencia digital</small></a>
-              <a href="./02-saas-next/"><h2>Flowboard</h2><small>Next.js · SaaS</small></a>
-              <a href="./03-restaurante/"><h2>La Brasa</h2><small>HTML · Restaurante</small></a>
-              <a href="./04-gimnasio/"><h2>IronForge</h2><small>HTML · Gimnasio</small></a>
-              <a href="./05-inmobiliaria/"><h2>Altura Homes</h2><small>HTML · Bienes raíces</small></a>
-              <a href="./06-evento/"><h2>DevConf 2026</h2><small>HTML · Evento tech</small></a>
-              <a href="./07-producto-react/"><h2>Aether H1</h2><small>React · Audífonos</small></a>
-              <a href="./08-portfolio-next/"><h2>Portafolio personal</h2><small>Next.js · Portafolio</small></a>
-              <a href="./09-cafe/"><h2>Origen Café</h2><small>HTML · Cafetería</small></a>
-              <a href="./10-travel/"><h2>Nomad Routes</h2><small>HTML · Viajes</small></a>
-              <a href="./11-academy/"><h2>SkillStack Academy</h2><small>HTML · Educación</small></a>
-              <a href="./12-clinic/"><h2>NovaClinic</h2><small>HTML · Salud</small></a>
-            </div>
-          </body>
-          </html>
-          EOF
+
+          # Root showcase page + SEO files
+          cp index.html _site/index.html
+          cp public/robots.txt public/sitemap.xml _site/
+
+          # Console apps are published as source, not as a site
+          for project in 13-java-biblioteca 14-python-logistics; do
+            cp -a "$project" _site/
+          done
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3

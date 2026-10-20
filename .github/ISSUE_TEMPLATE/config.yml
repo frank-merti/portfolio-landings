@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Portfolio live demo
+    url: https://frank-merti.github.io/portfolio-landings/
+    about: Browse the deployed projects.

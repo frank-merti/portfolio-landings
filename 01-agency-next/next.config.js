@@ -5,10 +5,13 @@ const basePath = isGhPages ? `/${repo}/01-agency-next` : ''
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    unoptimized: isGhPages,
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }]
+  },
   ...(isGhPages && {
     output: 'export',
-    basePath,
-    images: { unoptimized: true },
-  }),
+    basePath
+  })
 }
 module.exports = nextConfig

@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /01-agency-next
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
+    directory: /02-saas-next
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
+    directory: /07-producto-react
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
+    directory: /08-portfolio-next
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: /14-python-logistics
+    schedule:
+      interval: monthly
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

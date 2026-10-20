@@ -2,17 +2,16 @@
 from __future__ import annotations
 import heapq
 from collections import deque
-from typing import Optional
 
 from entities import Graph
 
 
-def dijkstra(graph: Graph, start: str) -> tuple[dict[str, float], dict[str, Optional[str]]]:
+def dijkstra(graph: Graph, start: str) -> tuple[dict[str, float], dict[str, str | None]]:
     """Returns shortest distances and predecessors for every node reachable from start."""
     nodes = graph.nodes()
     infinity = float("inf")
     distances: dict[str, float] = {node: infinity for node in nodes}
-    previous: dict[str, Optional[str]] = {node: None for node in nodes}
+    previous: dict[str, str | None] = {node: None for node in nodes}
 
     if start not in distances:
         return distances, previous
@@ -37,10 +36,10 @@ def dijkstra(graph: Graph, start: str) -> tuple[dict[str, float], dict[str, Opti
     return distances, previous
 
 
-def reconstruct_path(previous: dict[str, Optional[str]], start: str, end: str) -> list[str]:
+def reconstruct_path(previous: dict[str, str | None], start: str, end: str) -> list[str]:
     """Rebuilds the shortest path between two nodes using the predecessor map."""
     path: list[str] = []
-    cursor: Optional[str] = end
+    cursor: str | None = end
     while cursor is not None:
         path.append(cursor)
         cursor = previous.get(cursor)
