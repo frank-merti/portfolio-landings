@@ -54,7 +54,7 @@ machine learning, apps de escritorio en Python, videojuegos y apps móviles.
 ### Contacto
 
 - ✉️ [mertinezjosep@gmail.com](mailto:mertinezjosep@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/frank-merti)
+- 💼 [LinkedIn](https://www.linkedin.com/in/josé-francisco-martínez-tapia-66567a2a6)
 
 ---
 
@@ -99,4 +99,4 @@ API, Python desktop apps, games and mobile apps.
 ### Contact
 
 - ✉️ [mertinezjosep@gmail.com](mailto:mertinezjosep@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/frank-merti)
+- 💼 [LinkedIn](https://www.linkedin.com/in/josé-francisco-martínez-tapia-66567a2a6)
