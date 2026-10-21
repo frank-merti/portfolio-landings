@@ -34,6 +34,23 @@ Construyo interfaces web y productos digitales con foco en **rendimiento, accesi
 
 👉 **[Ver los 14 proyectos completos](https://github.com/frank-merti/portfolio-landings)**
 
+### Proyectos escolares
+
+Trabajos de asignaturas y prácticas con stacks distintos: bot de Discord, API de
+machine learning, apps de escritorio en Python, videojuegos y apps móviles.
+
+[VitaBot](https://github.com/Oblivion1214/VitaBot) ·
+[CheckNews](https://github.com/Oblivion1214/CheckNews) ·
+[PV Restaurante](https://github.com/Oblivion1214/PV-Restaurante-TDS) ·
+[GalactiQuest](https://github.com/Oblivion1214/VideojuegoGalactiQuest) ·
+[OpenGL Java](https://github.com/Oblivion1214/VideojuegoOpenGLJava) ·
+[PDF a TIFF](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) ·
+[Punto de venta](https://github.com/Frakinatra/topicos-desarollo) ·
+[Tutorías](https://github.com/Frakinatra/tutorias_app) ·
+[React Native](https://github.com/Oblivion1214/ProyectoAppReactNative) ·
+[Heladería](https://github.com/Frakinatra/Heladeria) ·
+[CheckNews PHP](https://github.com/Oblivion1214/CheckNewsPHP)
+
 ### Contacto
 
 - ✉️ [mertinezjosep@gmail.com](mailto:mertinezjosep@gmail.com)
@@ -61,6 +78,23 @@ I build web interfaces and digital products with a focus on **performance, acces
 | [Logistics CLI](https://github.com/frank-merti/portfolio-landings/tree/main/14-python-logistics) | Dijkstra, BFS and Priority Queue in Python | [Open](https://github.com/frank-merti/portfolio-landings/tree/main/14-python-logistics) |
 
 👉 **[See all 14 projects](https://github.com/frank-merti/portfolio-landings)**
+
+### School projects
+
+Coursework and lab projects across different stacks: Discord bot, machine learning
+API, Python desktop apps, games and mobile apps.
+
+[VitaBot](https://github.com/Oblivion1214/VitaBot) ·
+[CheckNews](https://github.com/Oblivion1214/CheckNews) ·
+[PV Restaurante](https://github.com/Oblivion1214/PV-Restaurante-TDS) ·
+[GalactiQuest](https://github.com/Oblivion1214/VideojuegoGalactiQuest) ·
+[OpenGL Java](https://github.com/Oblivion1214/VideojuegoOpenGLJava) ·
+[PDF to TIFF](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) ·
+[Point of sale](https://github.com/Frakinatra/topicos-desarollo) ·
+[Tutoring](https://github.com/Frakinatra/tutorias_app) ·
+[React Native](https://github.com/Oblivion1214/ProyectoAppReactNative) ·
+[Ice cream shop](https://github.com/Frakinatra/Heladeria) ·
+[CheckNews PHP](https://github.com/Oblivion1214/CheckNewsPHP)
 
 ### Contact
 

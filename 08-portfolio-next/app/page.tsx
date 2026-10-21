@@ -5,13 +5,14 @@ import {
   articles,
   experience,
   projects,
+  schoolProjects,
   skills,
   translate,
   type ContentKey,
   type Language
 } from '@/lib/content';
 
-const NAV = ['about', 'skills', 'projects', 'exp', 'contact'] as const;
+const NAV = ['about', 'skills', 'projects', 'school', 'exp', 'contact'] as const;
 
 export default function Page() {
   const [lang, setLang] = useState<Language>('es');
@@ -133,6 +134,36 @@ export default function Page() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="school" className="py-24 bg-panel/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-4xl mb-3">{t('school_title')}</h2>
+            <p className="text-pearl/60">{t('school_sub')}</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {schoolProjects.map((project) => (
+              <a
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-ink/60 rounded-2xl border border-white/5 p-6 hover:border-indigo/50 transition"
+              >
+                <h3 className="font-display text-lg mb-2">{project.name}</h3>
+                <p className="text-pearl/60 text-sm mb-4">{project.description[lang]}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((technology) => (
+                    <span key={technology} className="text-xs px-3 py-1 rounded-full bg-white/5 text-pearl/70">
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

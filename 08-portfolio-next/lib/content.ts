@@ -6,6 +6,7 @@ export const content = {
     nav_skills: 'Skills',
     nav_projects: 'Proyectos',
     nav_exp: 'Experiencia',
+    nav_school: 'Escolares',
     nav_contact: 'Contacto',
     hero_eb: 'Hola, soy Francisco 👋',
     hero_t: 'Desarrollador Full-Stack creando experiencias digitales.',
@@ -27,6 +28,8 @@ export const content = {
     contact_sub: 'Envíame un mensaje y te respondo en 24h.',
     contact_cta: 'Enviar mensaje',
     view_project: 'Ver proyecto →',
+    school_title: 'Proyectos escolares',
+    school_sub: 'Trabajos de asignaturas, prácticas y equipos de desarrollo.',
     ft: '© 2026 Francisco M. · MIT License'
   },
   en: {
@@ -34,6 +37,7 @@ export const content = {
     nav_skills: 'Skills',
     nav_projects: 'Projects',
     nav_exp: 'Experience',
+    nav_school: 'School',
     nav_contact: 'Contact',
     hero_eb: "Hi, I'm Francisco 👋",
     hero_t: 'Full-Stack Developer crafting digital experiences.',
@@ -55,6 +59,8 @@ export const content = {
     contact_sub: 'Send me a message and I reply within 24h.',
     contact_cta: 'Send message',
     view_project: 'View project →',
+    school_title: 'School projects',
+    school_sub: 'Coursework, labs and team projects built during my degree.',
     ft: '© 2026 Francisco M. · MIT License'
   }
 } satisfies Record<Language, Record<string, string>>;
@@ -121,6 +127,124 @@ export const articles: Article[] = [
   { title: 'Cómo empecé con Next.js App Router', date: 'Oct 2026' },
   { title: 'Tailwind tips para landings memorables', date: 'Sep 2026' },
   { title: 'Accesibilidad en componentes React', date: 'Aug 2026' }
+];
+
+export type SchoolProject = {
+  name: string;
+  description: Record<Language, string>;
+  technologies: string[];
+  url: string;
+};
+
+export const schoolProjects: SchoolProject[] = [
+  {
+    name: 'VitaBot',
+    description: {
+      es: 'Bot de Discord multifunción: comandos de audio, análisis y entretenimiento, con despliegue en Docker.',
+      en: 'Multipurpose Discord bot: audio, analytics and entertainment commands, deployed with Docker.'
+    },
+    technologies: ['Node.js', 'Discord.js', 'Docker'],
+    url: 'https://github.com/Oblivion1214/VitaBot'
+  },
+  {
+    name: 'CheckNews',
+    description: {
+      es: 'API Flask que analiza noticias con un modelo de machine learning para detectar contenido falso.',
+      en: 'Flask API that analyzes news with a machine learning model to detect fake content.'
+    },
+    technologies: ['Python', 'Flask', 'scikit-learn', 'Pandas'],
+    url: 'https://github.com/Oblivion1214/CheckNews'
+  },
+  {
+    name: 'PV Restaurante',
+    description: {
+      es: 'Sistema de punto de venta para restaurante: roles, inventario, reportes PDF y gráficas.',
+      en: 'Restaurant point of sale system: roles, inventory, PDF reports and charts.'
+    },
+    technologies: ['Python', 'PyQt5', 'Matplotlib', 'MySQL'],
+    url: 'https://github.com/Oblivion1214/PV-Restaurante-TDS'
+  },
+  {
+    name: 'GalactiQuest',
+    description: {
+      es: 'Videojuego shoot-em-up en Python con Pygame, POO y efectos de video con OpenCV.',
+      en: 'Shoot-em-up game in Python with Pygame, OOP and OpenCV video effects.'
+    },
+    technologies: ['Python', 'Pygame', 'OpenCV', 'OOP'],
+    url: 'https://github.com/Oblivion1214/VideojuegoGalactiQuest'
+  },
+  {
+    name: 'OpenGL Java',
+    description: {
+      es: 'Videojuego 3D en Java con OpenGL y LWJGL, con stages y sistema de audio.',
+      en: '3D game in Java with OpenGL and LWJGL, including stages and an audio system.'
+    },
+    technologies: ['Java', 'OpenGL', 'LWJGL'],
+    url: 'https://github.com/Oblivion1214/VideojuegoOpenGLJava'
+  },
+  {
+    name: 'PDF a TIFF',
+    description: {
+      es: 'Microservicio en Spring Boot que convierte documentos PDF a imágenes TIFF.',
+      en: 'Spring Boot service that converts PDF documents into TIFF images.'
+    },
+    technologies: ['Java', 'Spring Boot', 'Maven'],
+    url: 'https://github.com/Oblivion1214/Converidor-pdf-a-tiff'
+  },
+  {
+    name: 'Punto de venta',
+    description: {
+      es: 'Sistema de gestión de tienda: usuarios, proveedores y productos con PyQt5 y MySQL.',
+      en: 'Store management system: users, suppliers and products built with PyQt5 and MySQL.'
+    },
+    technologies: ['Python', 'PyQt5', 'MySQL'],
+    url: 'https://github.com/Frakinatra/topicos-desarollo'
+  },
+  {
+    name: 'Gestión de tutorías',
+    description: {
+      es: 'Aplicación de escritorio para administrar sesiones, áreas y usuarios de tutorías.',
+      en: 'Desktop app to manage tutoring sessions, areas and users.'
+    },
+    technologies: ['Python', 'Tkinter', 'tkcalendar'],
+    url: 'https://github.com/Frakinatra/tutorias_app'
+  },
+  {
+    name: 'CRUD Mobile',
+    description: {
+      es: 'App móvil en React Native con autenticación de Firebase y operaciones CRUD.',
+      en: 'React Native mobile app with Firebase authentication and CRUD operations.'
+    },
+    technologies: ['React Native', 'Firebase', 'Expo'],
+    url: 'https://github.com/Oblivion1214/ProyectoAppReactNative'
+  },
+  {
+    name: 'Heladería',
+    description: {
+      es: 'App móvil de heladería con React Native, Firebase y panel de administración.',
+      en: 'Ice cream shop mobile app with React Native, Firebase and an admin panel.'
+    },
+    technologies: ['React Native', 'Firebase'],
+    url: 'https://github.com/Frakinatra/Heladeria'
+  },
+  {
+    name: 'CheckNews Web',
+    description: {
+      es: 'Portal web en PHP y MySQL para registrar, reportar y verificar noticias.',
+      en: 'PHP and MySQL web portal to submit, report and verify news.'
+    },
+    technologies: ['PHP', 'MySQL'],
+    url: 'https://github.com/Oblivion1214/CheckNewsPHP'
+  },
+  {
+    name: 'Página Web IS',
+    description: {
+      es: 'Tienda en línea con catálogo, carrito y gestión de clientes en PHP y MySQL.',
+      en: 'Online store with catalog, cart and customer management in PHP and MySQL.'
+    },
+    technologies: ['PHP', 'MySQL', 'XAMPP'],
+    url: 'https://github.com/frank-merti/pagina-web-is'
+  }
 ];
 
 export type ContentKey = keyof typeof content.es;

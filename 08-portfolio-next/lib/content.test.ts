@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { articles, content, experience, projects, skills, translate, type ContentKey } from './content';
+import {
+  articles,
+  content,
+  experience,
+  projects,
+  schoolProjects,
+  skills,
+  translate,
+  type ContentKey
+} from './content';
 
 describe('portfolio content', () => {
   it('exposes the same keys for every language', () => {
@@ -33,6 +42,23 @@ describe('portfolio content', () => {
     expect(skills.length).toBeGreaterThan(0);
     expect(experience.length).toBeGreaterThan(0);
     expect(articles.length).toBeGreaterThan(0);
+  });
+
+  it('describes every school project in both languages', () => {
+    expect(schoolProjects.length).toBeGreaterThanOrEqual(10);
+    for (const project of schoolProjects) {
+      expect(project.name.trim()).not.toBe('');
+      expect(project.technologies.length).toBeGreaterThan(0);
+      expect(project.url).toMatch(/^https:\/\/github\.com\//);
+      for (const language of ['es', 'en'] as const) {
+        expect(project.description[language].trim(), `${project.name}/${language}`).not.toBe('');
+      }
+    }
+  });
+
+  it('keeps school project names unique', () => {
+    const names = schoolProjects.map((project) => project.name);
+    expect(new Set(names).size).toBe(names.length);
   });
 
   it('falls back to the key when a translation is missing', () => {
