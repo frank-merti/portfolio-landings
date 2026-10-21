@@ -39,17 +39,17 @@ Construyo interfaces web y productos digitales con foco en **rendimiento, accesi
 Trabajos de asignaturas y prácticas con stacks distintos: bot de Discord, API de
 machine learning, apps de escritorio en Python, videojuegos y apps móviles.
 
-[VitaBot](https://github.com/Oblivion1214/VitaBot) ·
-[CheckNews](https://github.com/Oblivion1214/CheckNews) ·
-[PV Restaurante](https://github.com/Oblivion1214/PV-Restaurante-TDS) ·
-[GalactiQuest](https://github.com/Oblivion1214/VideojuegoGalactiQuest) ·
-[OpenGL Java](https://github.com/Oblivion1214/VideojuegoOpenGLJava) ·
-[PDF a TIFF](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) ·
-[Punto de venta](https://github.com/Frakinatra/topicos-desarollo) ·
-[Tutorías](https://github.com/Frakinatra/tutorias_app) ·
-[React Native](https://github.com/Oblivion1214/ProyectoAppReactNative) ·
-[Heladería](https://github.com/Frakinatra/Heladeria) ·
-[CheckNews PHP](https://github.com/Oblivion1214/CheckNewsPHP)
+[VitaBot](https://github.com/frank-merti/VitaBot) ·
+[CheckNews](https://github.com/frank-merti/CheckNews) ·
+[PV Restaurante](https://github.com/frank-merti/PV-Restaurante-TDS) ·
+[GalactiQuest](https://github.com/frank-merti/VideojuegoGalactiQuest) ·
+[OpenGL Java](https://github.com/frank-merti/VideojuegoOpenGLJava) ·
+[PDF a TIFF](https://github.com/frank-merti/Converidor-pdf-a-tiff) ·
+[Punto de venta](https://github.com/frank-merti/topicos-desarollo) ·
+[Tutorías](https://github.com/frank-merti/tutorias_app) ·
+[React Native](https://github.com/frank-merti/ProyectoAppReactNative) ·
+[Heladería](https://github.com/frank-merti/Heladeria) ·
+[CheckNews PHP](https://github.com/frank-merti/CheckNewsPHP)
 
 ### Contacto
 
@@ -84,17 +84,17 @@ I build web interfaces and digital products with a focus on **performance, acces
 Coursework and lab projects across different stacks: Discord bot, machine learning
 API, Python desktop apps, games and mobile apps.
 
-[VitaBot](https://github.com/Oblivion1214/VitaBot) ·
-[CheckNews](https://github.com/Oblivion1214/CheckNews) ·
-[PV Restaurante](https://github.com/Oblivion1214/PV-Restaurante-TDS) ·
-[GalactiQuest](https://github.com/Oblivion1214/VideojuegoGalactiQuest) ·
-[OpenGL Java](https://github.com/Oblivion1214/VideojuegoOpenGLJava) ·
-[PDF to TIFF](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) ·
-[Point of sale](https://github.com/Frakinatra/topicos-desarollo) ·
-[Tutoring](https://github.com/Frakinatra/tutorias_app) ·
-[React Native](https://github.com/Oblivion1214/ProyectoAppReactNative) ·
-[Ice cream shop](https://github.com/Frakinatra/Heladeria) ·
-[CheckNews PHP](https://github.com/Oblivion1214/CheckNewsPHP)
+[VitaBot](https://github.com/frank-merti/VitaBot) ·
+[CheckNews](https://github.com/frank-merti/CheckNews) ·
+[PV Restaurante](https://github.com/frank-merti/PV-Restaurante-TDS) ·
+[GalactiQuest](https://github.com/frank-merti/VideojuegoGalactiQuest) ·
+[OpenGL Java](https://github.com/frank-merti/VideojuegoOpenGLJava) ·
+[PDF to TIFF](https://github.com/frank-merti/Converidor-pdf-a-tiff) ·
+[Point of sale](https://github.com/frank-merti/topicos-desarollo) ·
+[Tutoring](https://github.com/frank-merti/tutorias_app) ·
+[React Native](https://github.com/frank-merti/ProyectoAppReactNative) ·
+[Ice cream shop](https://github.com/frank-merti/Heladeria) ·
+[CheckNews PHP](https://github.com/frank-merti/CheckNewsPHP)
 
 ### Contact
 

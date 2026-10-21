@@ -45,17 +45,17 @@ Trabajos de asignaturas y prácticas de la carrera, publicados en repositorios p
 
 | Proyecto | Descripción | Stack | Código |
 |---|---|---|---|
-| VitaBot | Bot de Discord multifunción con despliegue en Docker | Node.js, Discord.js | [Ver](https://github.com/Oblivion1214/VitaBot) |
-| CheckNews | API Flask que detecta noticias falsas con machine learning | Python, Flask, scikit-learn | [Ver](https://github.com/Oblivion1214/CheckNews) |
-| PV Restaurante | Punto de venta de restaurante con roles, inventario y reportes | Python, PyQt5, Matplotlib | [Ver](https://github.com/Oblivion1214/PV-Restaurante-TDS) |
-| GalactiQuest | Videojuego shoot-em-up con Pygame y POO | Python, Pygame, OpenCV | [Ver](https://github.com/Oblivion1214/VideojuegoGalactiQuest) |
-| OpenGL Java | Videojuego 3D con OpenGL y LWJGL | Java, LWJGL | [Ver](https://github.com/Oblivion1214/VideojuegoOpenGLJava) |
-| PDF a TIFF | Microservicio Spring Boot que convierte PDF a TIFF | Java, Spring Boot | [Ver](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) |
-| Punto de venta | Gestión de tienda: usuarios, proveedores y productos | Python, PyQt5, MySQL | [Ver](https://github.com/Frakinatra/topicos-desarollo) |
-| Gestión de tutorías | App de escritorio para sesiones, áreas y usuarios | Python, Tkinter | [Ver](https://github.com/Frakinatra/tutorias_app) |
-| CRUD Mobile | App móvil con React Native, Firebase Auth y CRUD | React Native, Firebase | [Ver](https://github.com/Oblivion1214/ProyectoAppReactNative) |
-| Heladería | App móvil de heladería con panel de administración | React Native, Firebase | [Ver](https://github.com/Frakinatra/Heladeria) |
-| CheckNews Web | Portal PHP/MySQL para reportar y verificar noticias | PHP, MySQL | [Ver](https://github.com/Oblivion1214/CheckNewsPHP) |
+| VitaBot | Bot de Discord multifunción con despliegue en Docker | Node.js, Discord.js | [Ver](https://github.com/frank-merti/VitaBot) |
+| CheckNews | API Flask que detecta noticias falsas con machine learning | Python, Flask, scikit-learn | [Ver](https://github.com/frank-merti/CheckNews) |
+| PV Restaurante | Punto de venta de restaurante con roles, inventario y reportes | Python, PyQt5, Matplotlib | [Ver](https://github.com/frank-merti/PV-Restaurante-TDS) |
+| GalactiQuest | Videojuego shoot-em-up con Pygame y POO | Python, Pygame, OpenCV | [Ver](https://github.com/frank-merti/VideojuegoGalactiQuest) |
+| OpenGL Java | Videojuego 3D con OpenGL y LWJGL | Java, LWJGL | [Ver](https://github.com/frank-merti/VideojuegoOpenGLJava) |
+| PDF a TIFF | Microservicio Spring Boot que convierte PDF a TIFF | Java, Spring Boot | [Ver](https://github.com/frank-merti/Converidor-pdf-a-tiff) |
+| Punto de venta | Gestión de tienda: usuarios, proveedores y productos | Python, PyQt5, MySQL | [Ver](https://github.com/frank-merti/topicos-desarollo) |
+| Gestión de tutorías | App de escritorio para sesiones, áreas y usuarios | Python, Tkinter | [Ver](https://github.com/frank-merti/tutorias_app) |
+| CRUD Mobile | App móvil con React Native, Firebase Auth y CRUD | React Native, Firebase | [Ver](https://github.com/frank-merti/ProyectoAppReactNative) |
+| Heladería | App móvil de heladería con panel de administración | React Native, Firebase | [Ver](https://github.com/frank-merti/Heladeria) |
+| CheckNews Web | Portal PHP/MySQL para reportar y verificar noticias | PHP, MySQL | [Ver](https://github.com/frank-merti/CheckNewsPHP) |
 | Página Web IS | Tienda en línea con catálogo y carrito | PHP, MySQL | [Ver](https://github.com/frank-merti/pagina-web-is) |
 
 ### Aplicaciones de consola
@@ -168,17 +168,17 @@ Coursework and lab projects from my degree, published in their own repositories.
 
 | Project | Description | Stack | Code |
 |---|---|---|---|
-| VitaBot | Multipurpose Discord bot deployed with Docker | Node.js, Discord.js | [Open](https://github.com/Oblivion1214/VitaBot) |
-| CheckNews | Flask API that detects fake news with machine learning | Python, Flask, scikit-learn | [Open](https://github.com/Oblivion1214/CheckNews) |
-| PV Restaurante | Restaurant point of sale with roles, inventory and reports | Python, PyQt5, Matplotlib | [Open](https://github.com/Oblivion1214/PV-Restaurante-TDS) |
-| GalactiQuest | Shoot-em-up game with Pygame and OOP | Python, Pygame, OpenCV | [Open](https://github.com/Oblivion1214/VideojuegoGalactiQuest) |
-| OpenGL Java | 3D game with OpenGL and LWJGL | Java, LWJGL | [Open](https://github.com/Oblivion1214/VideojuegoOpenGLJava) |
-| PDF to TIFF | Spring Boot service that converts PDF to TIFF | Java, Spring Boot | [Open](https://github.com/Oblivion1214/Converidor-pdf-a-tiff) |
-| Point of sale | Store management: users, suppliers and products | Python, PyQt5, MySQL | [Open](https://github.com/Frakinatra/topicos-desarollo) |
-| Tutoring manager | Desktop app for sessions, areas and users | Python, Tkinter | [Open](https://github.com/Frakinatra/tutorias_app) |
-| CRUD Mobile | React Native app with Firebase auth and CRUD | React Native, Firebase | [Open](https://github.com/Oblivion1214/ProyectoAppReactNative) |
-| Ice cream shop | React Native app with an admin panel | React Native, Firebase | [Open](https://github.com/Frakinatra/Heladeria) |
-| CheckNews Web | PHP/MySQL portal to report and verify news | PHP, MySQL | [Open](https://github.com/Oblivion1214/CheckNewsPHP) |
+| VitaBot | Multipurpose Discord bot deployed with Docker | Node.js, Discord.js | [Open](https://github.com/frank-merti/VitaBot) |
+| CheckNews | Flask API that detects fake news with machine learning | Python, Flask, scikit-learn | [Open](https://github.com/frank-merti/CheckNews) |
+| PV Restaurante | Restaurant point of sale with roles, inventory and reports | Python, PyQt5, Matplotlib | [Open](https://github.com/frank-merti/PV-Restaurante-TDS) |
+| GalactiQuest | Shoot-em-up game with Pygame and OOP | Python, Pygame, OpenCV | [Open](https://github.com/frank-merti/VideojuegoGalactiQuest) |
+| OpenGL Java | 3D game with OpenGL and LWJGL | Java, LWJGL | [Open](https://github.com/frank-merti/VideojuegoOpenGLJava) |
+| PDF to TIFF | Spring Boot service that converts PDF to TIFF | Java, Spring Boot | [Open](https://github.com/frank-merti/Converidor-pdf-a-tiff) |
+| Point of sale | Store management: users, suppliers and products | Python, PyQt5, MySQL | [Open](https://github.com/frank-merti/topicos-desarollo) |
+| Tutoring manager | Desktop app for sessions, areas and users | Python, Tkinter | [Open](https://github.com/frank-merti/tutorias_app) |
+| CRUD Mobile | React Native app with Firebase auth and CRUD | React Native, Firebase | [Open](https://github.com/frank-merti/ProyectoAppReactNative) |
+| Ice cream shop | React Native app with an admin panel | React Native, Firebase | [Open](https://github.com/frank-merti/Heladeria) |
+| CheckNews Web | PHP/MySQL portal to report and verify news | PHP, MySQL | [Open](https://github.com/frank-merti/CheckNewsPHP) |
 | Web Store IS | Online store with catalog and cart | PHP, MySQL | [Open](https://github.com/frank-merti/pagina-web-is) |
 
 ### Console applications

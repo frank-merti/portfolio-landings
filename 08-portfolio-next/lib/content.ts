@@ -144,7 +144,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Multipurpose Discord bot: audio, analytics and entertainment commands, deployed with Docker.'
     },
     technologies: ['Node.js', 'Discord.js', 'Docker'],
-    url: 'https://github.com/Oblivion1214/VitaBot'
+    url: 'https://github.com/frank-merti/VitaBot'
   },
   {
     name: 'CheckNews',
@@ -153,7 +153,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Flask API that analyzes news with a machine learning model to detect fake content.'
     },
     technologies: ['Python', 'Flask', 'scikit-learn', 'Pandas'],
-    url: 'https://github.com/Oblivion1214/CheckNews'
+    url: 'https://github.com/frank-merti/CheckNews'
   },
   {
     name: 'PV Restaurante',
@@ -162,7 +162,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Restaurant point of sale system: roles, inventory, PDF reports and charts.'
     },
     technologies: ['Python', 'PyQt5', 'Matplotlib', 'MySQL'],
-    url: 'https://github.com/Oblivion1214/PV-Restaurante-TDS'
+    url: 'https://github.com/frank-merti/PV-Restaurante-TDS'
   },
   {
     name: 'GalactiQuest',
@@ -171,7 +171,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Shoot-em-up game in Python with Pygame, OOP and OpenCV video effects.'
     },
     technologies: ['Python', 'Pygame', 'OpenCV', 'OOP'],
-    url: 'https://github.com/Oblivion1214/VideojuegoGalactiQuest'
+    url: 'https://github.com/frank-merti/VideojuegoGalactiQuest'
   },
   {
     name: 'OpenGL Java',
@@ -180,7 +180,7 @@ export const schoolProjects: SchoolProject[] = [
       en: '3D game in Java with OpenGL and LWJGL, including stages and an audio system.'
     },
     technologies: ['Java', 'OpenGL', 'LWJGL'],
-    url: 'https://github.com/Oblivion1214/VideojuegoOpenGLJava'
+    url: 'https://github.com/frank-merti/VideojuegoOpenGLJava'
   },
   {
     name: 'PDF a TIFF',
@@ -189,7 +189,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Spring Boot service that converts PDF documents into TIFF images.'
     },
     technologies: ['Java', 'Spring Boot', 'Maven'],
-    url: 'https://github.com/Oblivion1214/Converidor-pdf-a-tiff'
+    url: 'https://github.com/frank-merti/Converidor-pdf-a-tiff'
   },
   {
     name: 'Punto de venta',
@@ -198,7 +198,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Store management system: users, suppliers and products built with PyQt5 and MySQL.'
     },
     technologies: ['Python', 'PyQt5', 'MySQL'],
-    url: 'https://github.com/Frakinatra/topicos-desarollo'
+    url: 'https://github.com/frank-merti/topicos-desarollo'
   },
   {
     name: 'Gestión de tutorías',
@@ -207,7 +207,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Desktop app to manage tutoring sessions, areas and users.'
     },
     technologies: ['Python', 'Tkinter', 'tkcalendar'],
-    url: 'https://github.com/Frakinatra/tutorias_app'
+    url: 'https://github.com/frank-merti/tutorias_app'
   },
   {
     name: 'CRUD Mobile',
@@ -216,7 +216,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'React Native mobile app with Firebase authentication and CRUD operations.'
     },
     technologies: ['React Native', 'Firebase', 'Expo'],
-    url: 'https://github.com/Oblivion1214/ProyectoAppReactNative'
+    url: 'https://github.com/frank-merti/ProyectoAppReactNative'
   },
   {
     name: 'Heladería',
@@ -225,7 +225,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'Ice cream shop mobile app with React Native, Firebase and an admin panel.'
     },
     technologies: ['React Native', 'Firebase'],
-    url: 'https://github.com/Frakinatra/Heladeria'
+    url: 'https://github.com/frank-merti/Heladeria'
   },
   {
     name: 'CheckNews Web',
@@ -234,7 +234,7 @@ export const schoolProjects: SchoolProject[] = [
       en: 'PHP and MySQL web portal to submit, report and verify news.'
     },
     technologies: ['PHP', 'MySQL'],
-    url: 'https://github.com/Oblivion1214/CheckNewsPHP'
+    url: 'https://github.com/frank-merti/CheckNewsPHP'
   },
   {
     name: 'Página Web IS',
