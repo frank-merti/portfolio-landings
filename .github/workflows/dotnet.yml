@@ -1,0 +1,53 @@
+name: CI (.NET)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '16-dotnet-algorithms/**'
+      - '17-dotnet-taskboard-api/**'
+      - '.github/workflows/dotnet.yml'
+  pull_request:
+    paths:
+      - '16-dotnet-algorithms/**'
+      - '17-dotnet-taskboard-api/**'
+      - '.github/workflows/dotnet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dotnet-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build & test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - name: 16-dotnet-algorithms
+            solution: 16-dotnet-algorithms/Algorithms.sln
+          - name: 17-dotnet-taskboard-api
+            solution: 17-dotnet-taskboard-api/TaskboardApi.sln
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore
+        run: dotnet restore ${{ matrix.solution }}
+      - name: Build
+        run: dotnet build ${{ matrix.solution }} --configuration Release --no-restore
+      - name: Test
+        run: dotnet test ${{ matrix.solution }} --configuration Release --no-build --collect:"XPlat Code Coverage"
+      - name: Upload coverage
+        if: matrix.name == '16-dotnet-algorithms'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.name }}
+          path: '**/coverage*.xml'
+          if-no-files-found: ignore

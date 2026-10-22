@@ -1,0 +1,23 @@
+## .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+project.lock.json
+artifacts/
+TestResults/
+coverage*.json
+coverage*.xml
+*.nupkg
+*.snupkg
+
+## Local database
+*.db
+*.db-shm
+*.db-wal
+
+## Secrets
+.env
+appsettings.Local.json

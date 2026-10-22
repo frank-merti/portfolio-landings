@@ -86,6 +86,8 @@ export const projects: Project[] = [
   { title: 'SkillStack Academy', description: 'Plataforma educativa tech: cursos, planes, instructores.', technologies: ['HTML', 'Tailwind CDN'], gradient: 'from-violet-600 to-purple-700', href: '../11-academy' },
   { title: 'NovaClinic', description: 'Clínica médica integral: servicios, doctores, citas.', technologies: ['HTML', 'Tailwind CDN'], gradient: 'from-teal-500 to-emerald-600', href: '../12-clinic' },
   { title: 'Taskboard', description: 'Kanban full-stack: API REST, auth con scrypt, sesiones en base de datos, Prisma + SQLite y 21 tests.', technologies: ['Next.js', 'Prisma', 'SQLite', 'Zod'], gradient: 'from-indigo-500 to-blue-700', href: '../15-taskboard-fullstack' },
+  { title: 'Taskboard API', description: 'REST API con ASP.NET Core 8, EF Core, JWT y 12 tests de integración.', technologies: ['C#', 'ASP.NET Core', 'EF Core', 'SQLite'], gradient: 'from-blue-600 to-indigo-700', href: '../17-dotnet-taskboard-api' },
+  { title: 'Algorithms CLI (.NET)', description: 'Merge Sort, Quick Sort, búsqueda binaria, Dijkstra, BFS y caché LRU en C#.', technologies: ['C#', '.NET 8', 'xUnit'], gradient: 'from-purple-600 to-fuchsia-700', href: '../16-dotnet-algorithms' },
   { title: 'Library CLI', description: 'Consola en Java: POO, Merge Sort, búsqueda binaria, Queue y pila LIFO.', technologies: ['Java', 'CLI'], gradient: 'from-orange-500 to-red-600', href: '../13-java-biblioteca' },
   { title: 'Logistics CLI', description: 'Consola en Python: grafo, Dijkstra, BFS, Merge Sort y cola de prioridad.', technologies: ['Python', 'CLI'], gradient: 'from-sky-600 to-blue-700', href: '../14-python-logistics' }
 ];

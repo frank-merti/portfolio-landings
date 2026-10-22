@@ -58,6 +58,13 @@ Trabajos de asignaturas y prácticas de la carrera, publicados en repositorios p
 | CheckNews Web | Portal PHP/MySQL para reportar y verificar noticias | PHP, MySQL | [Ver](https://github.com/frank-merti/CheckNewsPHP) |
 | Página Web IS | Tienda en línea con catálogo y carrito | PHP, MySQL | [Ver](https://github.com/frank-merti/pagina-web-is) |
 
+### Aplicaciones .NET
+
+| # | Proyecto | Stack | Conceptos |
+|---|---|---|---|
+| 16 | Algorithms CLI | C# 12, .NET 8, xUnit | Merge Sort, Quick Sort, búsqueda binaria, Dijkstra, BFS, caché LRU, genéricos, interfaz ES/EN |
+| 17 | Taskboard API | ASP.NET Core 8, EF Core, SQLite, JWT, xUnit | Minimal APIs, inyección de dependencias, patrón Options, PBKDF2, OpenAPI, tests de integración |
+
 ### Aplicaciones de consola
 
 | # | Proyecto | Stack | Conceptos |
@@ -96,6 +103,10 @@ cd 14-python-logistics && python main.py
 
 # Full-stack (15)
 cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
+
+# .NET (16, 17)
+cd 16-dotnet-algorithms && dotnet test && dotnet run --project src/Algorithms.Cli
+cd 17-dotnet-taskboard-api && dotnet test && dotnet run --project src/Taskboard.Api
 ```
 
 ### Estructura
@@ -181,6 +192,13 @@ Coursework and lab projects from my degree, published in their own repositories.
 | CheckNews Web | PHP/MySQL portal to report and verify news | PHP, MySQL | [Open](https://github.com/frank-merti/CheckNewsPHP) |
 | Web Store IS | Online store with catalog and cart | PHP, MySQL | [Open](https://github.com/frank-merti/pagina-web-is) |
 
+### .NET applications
+
+| # | Project | Stack | Concepts |
+|---|---|---|---|
+| 16 | Algorithms CLI | C# 12, .NET 8, xUnit | Merge Sort, Quick Sort, binary search, Dijkstra, BFS, LRU cache, generics, ES/EN UI |
+| 17 | Taskboard API | ASP.NET Core 8, EF Core, SQLite, JWT, xUnit | Minimal APIs, dependency injection, Options pattern, PBKDF2, OpenAPI, integration tests |
+
 ### Console applications
 
 | # | Project | Stack | Concepts |
@@ -219,6 +237,10 @@ cd 14-python-logistics && python main.py
 
 # Full-stack (15)
 cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
+
+# .NET (16, 17)
+cd 16-dotnet-algorithms && dotnet test && dotnet run --project src/Algorithms.Cli
+cd 17-dotnet-taskboard-api && dotnet test && dotnet run --project src/Taskboard.Api
 ```
 
 ### Tech stack

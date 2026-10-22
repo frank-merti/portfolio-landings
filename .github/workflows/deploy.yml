@@ -89,8 +89,8 @@ jobs:
           cp index.html _site/index.html
           cp public/robots.txt public/sitemap.xml _site/
 
-          # Console apps are published as source, not as a site
-          for project in 13-java-biblioteca 14-python-logistics; do
+          # Console apps and backend services are published as source, not as a site
+          for project in 13-java-biblioteca 14-python-logistics 16-dotnet-algorithms 17-dotnet-taskboard-api; do
             cp -a "$project" _site/
           done
 

@@ -1,0 +1,17 @@
+## .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+project.lock.json
+project.fragment.lock.json
+artifacts/
+TestResults/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.nupkg
+*.snupkg
+.env
