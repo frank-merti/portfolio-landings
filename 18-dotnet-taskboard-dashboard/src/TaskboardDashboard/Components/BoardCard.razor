@@ -1,0 +1,23 @@
+@inject NavigationManager Navigation
+
+<div class="board-card card" @onclick="Open">
+    <h4 class="board-card-title">@Board?.Name</h4>
+    @if (!string.IsNullOrWhiteSpace(Board?.Description))
+    {
+        <p class="board-card-description">@Board.Description</p>
+    }
+    <span class="board-card-count">@Board?.TaskCount</span>
+</div>
+
+@code {
+    [Parameter]
+    public BoardDto? Board { get; set; }
+
+    private void Open()
+    {
+        if (Board is not null)
+        {
+            Navigation.NavigateTo($"/boards/{Board.Id}");
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@page "/login"
+@inject NavigationManager Navigation
+@inject AuthService Auth
+
+<h3>Iniciar sesión</h3>
+
+@if (Auth.User is not null)
+{
+    <p>Conectado como @Auth.User.Email</p>
+    <button type="button" class="btn btn-primary" @onclick="GoBoards">Ir a mis tableros</button>
+}
+else
+{
+    <div class="login-form">
+        <input class="form-control" @bind="_email" placeholder="Email" />
+        <input class="form-control" type="password" @bind="_password" placeholder="Password" />
+        <button type="button" class="btn btn-primary" @onclick="Submit">Entrar</button>
+    </div>
+    @if (_error is not null)
+    {
+        <p class="text-danger">@_error</p>
+    }
+}
+
+@code {
+    private string _email = string.Empty;
+    private string _password = string.Empty;
+    private string? _error;
+
+    private Task Submit()
+    {
+        _error = null;
+
+        if (string.IsNullOrWhiteSpace(_email) || string.IsNullOrWhiteSpace(_password))
+        {
+            _error = "Ingresa email y contraseña.";
+            return Task.CompletedTask;
+        }
+
+        return Auth.LoginAsync(_email, _password);
+    }
+
+    private void GoBoards()
+    {
+        Navigation.NavigateTo("/boards");
+    }
+}

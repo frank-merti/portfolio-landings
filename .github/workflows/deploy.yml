@@ -90,7 +90,7 @@ jobs:
           cp public/robots.txt public/sitemap.xml _site/
 
           # Console apps and backend services are published as source, not as a site
-          for project in 13-java-biblioteca 14-python-logistics 16-dotnet-algorithms 17-dotnet-taskboard-api; do
+          for project in 13-java-biblioteca 14-python-logistics 16-dotnet-algorithms 17-dotnet-taskboard-api 18-dotnet-taskboard-dashboard; do
             cp -a "$project" _site/
           done
 

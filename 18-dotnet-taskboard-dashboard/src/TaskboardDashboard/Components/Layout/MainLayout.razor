@@ -1,0 +1,37 @@
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject AuthService Auth
+
+<div class="page">
+    <aside class="sidebar">
+        <div class="brand">Taskboard</div>
+        <nav>
+            <a href="boards" class="@(IsBoardsPage() ? "active" : "")">Tableros</a>
+        </nav>
+        <div class="spacer"></div>
+        @if (Auth.User is not null)
+        {
+            <div class="user-info">
+                <span>@Auth.User.DisplayName</span>
+                <button type="button" class="logout" @onclick="Logout">Cerrar sesión</button>
+            </div>
+        }
+    </aside>
+    <main class="content">
+        @Body
+    </main>
+</div>
+
+@code {
+    private bool IsBoardsPage()
+    {
+        var uri = Navigation.Uri;
+        return uri.Contains("/boards", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private async Task Logout()
+    {
+        await Auth.LogoutAsync();
+        Navigation.NavigateTo("/login");
+    }
+}

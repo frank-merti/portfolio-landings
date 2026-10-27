@@ -1,0 +1,48 @@
+<div class="task-card card">
+    <div class="task-header">
+        <strong class="task-title">@Task.Title</strong>
+        <span class="task-priority">@Task.Priority</span>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Task.Notes))
+    {
+        <p class="task-notes">@Task.Notes</p>
+    }
+    <div class="task-meta">Estado: @Task.Status</div>
+    <div class="task-actions">
+        <button type="button" class="btn btn-sm btn-primary" @onclick="NextAsync">@NextLabel</button>
+        <button type="button" class="btn btn-sm btn-danger" @onclick="DeleteAsync">Eliminar</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public TaskDto Task { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback OnUpdated { get; set; }
+
+    [Parameter]
+    public EventCallback OnDeleted { get; set; }
+
+    private Task NextAsync()
+    {
+        var nextStatus = Task.Status switch
+        {
+            "Todo" => "Doing",
+            "Doing" => "Done",
+            _ => Task.Status
+        };
+
+        var updated = new TaskDto(Task.Id, Task.Title, Task.Notes, nextStatus, Task.Priority, Task.CreatedAt, Task.UpdatedAt);
+        return OnUpdated.InvokeAsync(updated);
+    }
+
+    private Task DeleteAsync() => OnDeleted.InvokeAsync(Task);
+
+    private string NextLabel => Task.Status switch
+    {
+        "Todo" => "Comenzar",
+        "Doing" => "Completar",
+        _ => "—"
+    };
+}

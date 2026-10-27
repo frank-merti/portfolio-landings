@@ -6,11 +6,13 @@ on:
     paths:
       - '16-dotnet-algorithms/**'
       - '17-dotnet-taskboard-api/**'
+      - '18-dotnet-taskboard-dashboard/**'
       - '.github/workflows/dotnet.yml'
   pull_request:
     paths:
       - '16-dotnet-algorithms/**'
       - '17-dotnet-taskboard-api/**'
+      - '18-dotnet-taskboard-dashboard/**'
       - '.github/workflows/dotnet.yml'
   workflow_dispatch:
 
@@ -33,6 +35,8 @@ jobs:
             solution: 16-dotnet-algorithms/Algorithms.sln
           - name: 17-dotnet-taskboard-api
             solution: 17-dotnet-taskboard-api/TaskboardApi.sln
+          - name: 18-dotnet-taskboard-dashboard
+            solution: 18-dotnet-taskboard-dashboard/TaskboardDashboard.sln
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4

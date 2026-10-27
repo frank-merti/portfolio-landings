@@ -64,6 +64,7 @@ Trabajos de asignaturas y prácticas de la carrera, publicados en repositorios p
 |---|---|---|---|
 | 16 | Algorithms CLI | C# 12, .NET 8, xUnit | Merge Sort, Quick Sort, búsqueda binaria, Dijkstra, BFS, caché LRU, genéricos, interfaz ES/EN |
 | 17 | Taskboard API | ASP.NET Core 8, EF Core, SQLite, JWT, xUnit | Minimal APIs, inyección de dependencias, patrón Options, PBKDF2, OpenAPI, tests de integración |
+| 18 | Taskboard Dashboard | Blazor Server, .NET 8, bUnit | Dashboard Blazor Server con HttpClientFactory tipado, auth JWT y tests con bUnit |
 
 ### Aplicaciones de consola
 
@@ -104,9 +105,10 @@ cd 14-python-logistics && python main.py
 # Full-stack (15)
 cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
 
-# .NET (16, 17)
+# .NET (16, 17, 18)
 cd 16-dotnet-algorithms && dotnet test && dotnet run --project src/Algorithms.Cli
 cd 17-dotnet-taskboard-api && dotnet test && dotnet run --project src/Taskboard.Api
+cd 18-dotnet-taskboard-dashboard && dotnet run --project src/TaskboardDashboard
 ```
 
 ### Estructura
@@ -128,6 +130,9 @@ portfolio-landings/
 ├── 13-java-biblioteca/  # Java (POO + DSA)
 ├── 14-python-logistics/ # Python (POO + DSA)
 ├── 15-taskboard-fullstack/ # Next.js + Prisma (API, auth, DB, tests)
+├── 16-dotnet-algorithms/   # C# (algoritmos, CLI, tests)
+├── 17-dotnet-taskboard-api/ # ASP.NET Core 8 (API, JWT, OpenAPI)
+├── 18-dotnet-taskboard-dashboard/ # Blazor Server (dashboard, bUnit)
 ├── .github/workflows/   # CI + deploy a GitHub Pages
 ├── index.html           # Índice del sitio desplegado
 └── LICENSE              # MIT
@@ -198,6 +203,7 @@ Coursework and lab projects from my degree, published in their own repositories.
 |---|---|---|---|
 | 16 | Algorithms CLI | C# 12, .NET 8, xUnit | Merge Sort, Quick Sort, binary search, Dijkstra, BFS, LRU cache, generics, ES/EN UI |
 | 17 | Taskboard API | ASP.NET Core 8, EF Core, SQLite, JWT, xUnit | Minimal APIs, dependency injection, Options pattern, PBKDF2, OpenAPI, integration tests |
+| 18 | Taskboard Dashboard | Blazor Server, .NET 8, bUnit | Blazor Server dashboard with typed HttpClientFactory, JWT auth and bUnit component tests |
 
 ### Console applications
 
@@ -238,9 +244,10 @@ cd 14-python-logistics && python main.py
 # Full-stack (15)
 cd 15-taskboard-fullstack && npm install && npm run db:push && npm run dev
 
-# .NET (16, 17)
+# .NET (16, 17, 18)
 cd 16-dotnet-algorithms && dotnet test && dotnet run --project src/Algorithms.Cli
 cd 17-dotnet-taskboard-api && dotnet test && dotnet run --project src/Taskboard.Api
+cd 18-dotnet-taskboard-dashboard && dotnet run --project src/TaskboardDashboard
 ```
 
 ### Tech stack

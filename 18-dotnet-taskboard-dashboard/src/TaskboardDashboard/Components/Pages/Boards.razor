@@ -1,0 +1,72 @@
+@page "/boards"
+@inject NavigationManager Navigation
+@inject ITaskboardApi Api
+@inject AuthService Auth
+
+<h3>Mis tableros</h3>
+
+@if (Auth.User is null)
+{
+    <p>Debes iniciar sesión para ver tus tableros.</p>
+    <button type="button" class="btn btn-primary" @onclick="GoLogin">Iniciar sesión</button>
+}
+else if (_boards is null)
+{
+    <p>Cargando...</p>
+}
+else if (_boards.Count == 0)
+{
+    <p>Aún no tienes tableros.</p>
+}
+else
+{
+    <div class="boards-grid">
+        @foreach (var board in _boards)
+        {
+            <BoardCard Board="board" />
+        }
+    </div>
+}
+
+@if (Auth.User is not null)
+{
+    <div class="create-board">
+        <input class="form-control" @bind="_newBoardName" placeholder="Nombre del tablero" />
+        <input class="form-control" @bind="_newBoardDescription" placeholder="Descripción (opcional)" />
+        <button type="button" class="btn btn-primary" @onclick="CreateBoard">Crear tablero</button>
+    </div>
+}
+
+@code {
+    private List<BoardDto>? _boards;
+    private string _newBoardName = string.Empty;
+    private string _newBoardDescription = string.Empty;
+    private string _newBoardColor = "indigo";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Auth.User is null)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        _boards = await Api.ListBoardsAsync(Auth.Token ?? string.Empty);
+    }
+
+    private void GoLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+
+    private Task CreateBoard()
+    {
+        if (string.IsNullOrWhiteSpace(_newBoardName))
+        {
+            return Task.CompletedTask;
+        }
+
+        return Api.CreateBoardAsync(Auth.Token ?? string.Empty, _newBoardName, _newBoardDescription, _newBoardColor)
+            .ContinueWith(_ => Api.ListBoardsAsync(Auth.Token ?? string.Empty));
+    }
+}

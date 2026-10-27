@@ -1,0 +1,103 @@
+@page "/boards/{BoardId:guid}"
+@inject NavigationManager Navigation
+@inject ITaskboardApi Api
+@inject AuthService Auth
+
+<h3>@(_board?.Name ?? "Tablero")</h3>
+
+@if (_board is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <p>@_board.Description</p>
+    <p>Tareas: @_board.Tasks.Count</p>
+
+    @if (_board.Tasks.Count == 0)
+    {
+        <p>Sin tareas.</p>
+    }
+    else
+    {
+        @foreach (var task in _board.Tasks)
+        {
+            <TaskCard Task="task"
+                     OnUpdated="@((Action)(() => UpdateTask(task)))"
+                     OnDeleted="@((Action)(() => DeleteTask(task)))" />
+        }
+    }
+
+    <hr />
+    <h4>Nueva tarea</h4>
+    <input class="form-control" @bind="_newTaskTitle" placeholder="Título" />
+    <input class="form-control" @bind="_newTaskNotes" placeholder="Notas (opcional)" />
+    <select class="form-select" @bind="_newTaskPriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    <select class="form-select" @bind="_newTaskStatus">
+        <option value="Todo">Todo</option>
+        <option value="Doing">Doing</option>
+        <option value="Done">Done</option>
+    </select>
+    <button type="button" class="btn btn-primary" @onclick="AddTask">Agregar tarea</button>
+}
+
+@code {
+    [Parameter]
+    public Guid BoardId { get; set; }
+
+    private BoardDetailDto? _board;
+    private string _newTaskTitle = string.Empty;
+    private string _newTaskNotes = string.Empty;
+    private string _newTaskPriority = "Medium";
+    private string _newTaskStatus = "Todo";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Auth.User is null)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        _board = await Api.GetBoardAsync(Auth.Token ?? string.Empty, BoardId);
+    }
+
+    private Task UpdateTask(TaskDto task)
+    {
+        if (_board is not null)
+        {
+            _board.Tasks = _board.Tasks.Select(t => t.Id == task.Id ? task : t).ToList();
+        }
+
+        return Task.CompletedTask;
+    }
+
+    private Task DeleteTask(TaskDto task)
+    {
+        if (_board is not null)
+        {
+            _board.Tasks = _board.Tasks.Where(t => t.Id != task.Id).ToList();
+        }
+
+        return Task.CompletedTask;
+    }
+
+    private async Task AddTask()
+    {
+        if (_board is null || string.IsNullOrWhiteSpace(_newTaskTitle))
+        {
+            return;
+        }
+
+        var created = await Api.CreateTaskAsync(Auth.Token ?? string.Empty, BoardId, _newTaskTitle, _newTaskNotes, _newTaskPriority, _newTaskStatus);
+
+        if (created is not null)
+        {
+            _board.Tasks = _board.Tasks.Append(created).ToList();
+        }
+    }
+}
